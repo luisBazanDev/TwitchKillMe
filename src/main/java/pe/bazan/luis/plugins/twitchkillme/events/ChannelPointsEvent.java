@@ -8,8 +8,6 @@ public class ChannelPointsEvent {
   public static void onRewardRedeemed(RewardRedeemedEvent e) {
     final String username = e.getRedemption().getUser().getDisplayName();
     final int amount = (int) e.getRedemption().getReward().getCost();
-    System.out.println("Reward! " + String.valueOf(amount) + " points");
-
     TwitchKillMe.getInstance().getRewardsConfig().getRewards().forEach((s, reward) -> {
       if(!reward.activePoints(amount)) return;
 
