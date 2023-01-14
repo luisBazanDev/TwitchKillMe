@@ -7,14 +7,17 @@ import org.bukkit.scheduler.BukkitTask;
 import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MainConfigManager {
   private TwitchKillMe plugin;
   private CustomConfig configFile;
+  private HashMap<String, String> channels;
   public MainConfigManager(TwitchKillMe plugin){
     this.plugin = plugin;
     registerConfig();
+    load();
   }
 
   public void registerConfig(){
@@ -24,6 +27,10 @@ public class MainConfigManager {
 
   public void load(){
     FileConfiguration config = configFile.getConfig();
+    channels = new HashMap<>();
+    for(String channel : config.getStringList("twitch.channels")) {
+      channels.put(channel.split("/")[1], channel.split("/")[0]);
+    }
   }
 
   public void reloadConfig(){
@@ -47,7 +54,19 @@ public class MainConfigManager {
     return playerList;
   }
 
-  public List<String> getChannels() {
-    return configFile.getConfig().getStringList("twitch.channels");
+  public List<String> getChannelsName() {
+    final List<String> channelNames = new ArrayList<>();
+    channels.forEach((k, v) -> {channelNames.add(v);});
+    return channelNames;
+  }
+
+  public List<String> getChannelsId() {
+    final List<String> channelIds = new ArrayList<>();
+    channels.forEach((k, v) -> {channelIds.add(k);});
+    return channelIds;
+  }
+
+  public HashMap<String, String> getChannels() {
+    return channels;
   }
 }

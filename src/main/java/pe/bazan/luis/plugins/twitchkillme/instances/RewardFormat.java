@@ -8,12 +8,14 @@ public class RewardFormat {
   final private String username;
   final private String amount;
   final private String method;
+  final private String channelId;
 
   public RewardFormat(
           String name,
           String username,
           String amount,
           String method,
+          String channelId,
           String player
   ) {
     this.name = name;
@@ -21,6 +23,7 @@ public class RewardFormat {
     this.amount = amount;
     this.method = method;
     this.player = player;
+    this.channelId = channelId;
   }
 
   public String replace(String text) {
@@ -34,5 +37,29 @@ public class RewardFormat {
 
   public String replaceWithColors(String text) {
     return ChatColor.translateAlternateColorCodes('&', replace(text));
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public String getPlayer() {
+    return player;
+  }
+
+  public String getUsername() {
+    return username;
+  }
+
+  public String getAmount() {
+    return amount;
+  }
+
+  public String getMethod() {
+    return method;
+  }
+
+  public String getChannelId() {
+    return channelId;
   }
 }

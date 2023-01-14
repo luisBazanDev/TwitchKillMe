@@ -2,7 +2,7 @@ twitch:
   token: "YOUR TOKEN"
   chat-token: "" # "" use token default
   channels:
-    - 111111111
+    - luisbazan/111111111
 
 # Here the white list of players to apply the rewards
 players:

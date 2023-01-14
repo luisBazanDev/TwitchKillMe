@@ -6,11 +6,12 @@ import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
 
 public class HypeTrainEvent {
   public static void onHypeTrain(HypeTrainLevelUpEvent e) {
+    final String channelId = e.getChannelId();
     final Integer lvl = e.getData().getProgress().getLevel().getValue();
     TwitchKillMe.getInstance().getRewardsConfig().getRewards().forEach((s, reward) -> {
       if(!reward.activeHypeTrain(lvl)) return;
       for(Player p : TwitchKillMe.getInstance().getMainConfigManager().getPlayers()) {
-        reward.runReward("Everyone", String.valueOf(lvl), "Hype Train", p);
+        reward.runReward("Everyone", String.valueOf(lvl), "Hype Train", channelId, p);
       }
     });
   }

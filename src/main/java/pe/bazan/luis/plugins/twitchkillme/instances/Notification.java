@@ -5,6 +5,7 @@ import org.bukkit.Sound;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import pe.bazan.luis.plugins.twitchkillme.MessageFormat;
+import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
 
 import java.time.Duration;
 
@@ -41,5 +42,12 @@ public class Notification {
     p.showTitle(titleComponent);
     p.playSound(p.getLocation(), sound, pitch, volume);
     p.sendActionBar(MessageFormat.formatMC(formatter.replace(actionbar)));
+  }
+
+  public void notifyTwitch(RewardFormat formatter) {
+    TwitchKillMe.getInstance().sayTwitch(
+            TwitchKillMe.getInstance().getMainConfigManager().getChannels().get(formatter.getChannelId()),
+            formatter.replace(twitch)
+    );
   }
 }

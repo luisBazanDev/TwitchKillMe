@@ -21,6 +21,13 @@ public class TwitchService {
     this.client = buildClient();
     subscribeTopics();
     registerEvents();
+    joinChannels();
+  }
+
+  public void joinChannels() {
+    for (String channel : twitchKillMe.getMainConfigManager().getChannelsName()) {
+      client.getChat().joinChannel(channel);
+    }
   }
 
   public void registerEvents() {
@@ -29,7 +36,7 @@ public class TwitchService {
   }
 
   public void subscribeTopics() {
-    for (String channel : twitchKillMe.getMainConfigManager().getChannels()) {
+    for (String channel : twitchKillMe.getMainConfigManager().getChannelsId()) {
       client.getPubSub().listenForChannelPointsRedemptionEvents(credential, channel);
       client.getPubSub().listenForHypeTrainEvents(credential, channel);
     }

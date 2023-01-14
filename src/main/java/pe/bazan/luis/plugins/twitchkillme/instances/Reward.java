@@ -32,11 +32,15 @@ public class Reward {
           String username,
           String amount,
           String method,
+          String channelId,
           Player p
   ) {
-    RewardFormat rewardFormat = new RewardFormat(this.name, username, amount, method, p.getName());
+    RewardFormat rewardFormat = new RewardFormat(this.name, username, amount, method, channelId, p.getName());
 
-    notification.notifyPlayer(rewardFormat, p);
+    if(notification != null) {
+      notification.notifyPlayer(rewardFormat, p);
+      notification.notifyTwitch(rewardFormat);
+    }
 
     switch (preset) {
       case "summon":

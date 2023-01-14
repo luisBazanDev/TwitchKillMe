@@ -17,8 +17,8 @@ public final class TwitchKillMe extends JavaPlugin {
     // Plugin startup logic
     instance = this;
     this.mainConfigManager = new MainConfigManager(this);
-    this.rewardsConfig = new RewardsConfig(this);
     this.notificationsConfig = new NotificationsConfig(this);
+    this.rewardsConfig = new RewardsConfig(this);
     twitchService = new TwitchService(this);
   }
 
