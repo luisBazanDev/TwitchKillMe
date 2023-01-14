@@ -10,7 +10,7 @@ import java.util.HashMap;
 public class RewardsConfig {
     private TwitchKillMe plugin;
     private CustomConfig configFile;
-    private HashMap<String, Reward> notifications;
+    private static HashMap<String, Reward> rewards;
     public RewardsConfig(TwitchKillMe plugin) {
       this.plugin = plugin;
       registerConfig();
@@ -23,10 +23,10 @@ public class RewardsConfig {
 
     public void load() {
       FileConfiguration config = configFile.getConfig();
-      notifications = new HashMap<>();
+      rewards = new HashMap<>();
       for(String key : config.getConfigurationSection("rewards").getKeys(false)) {
         ConfigurationSection rewardConfig = config.getConfigurationSection("rewards."+key);
-        notifications.put(key.toLowerCase(), new Reward(rewardConfig));
+        rewards.put(key.toLowerCase(), new Reward(rewardConfig));
       }
     }
 
@@ -34,4 +34,8 @@ public class RewardsConfig {
       configFile.reloadConfig();
       load();
     }
+
+  public HashMap<String, Reward> getRewards() {
+    return rewards;
+  }
 }

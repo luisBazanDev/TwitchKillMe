@@ -3,6 +3,8 @@ package pe.bazan.luis.plugins.twitchkillme;
 import com.github.philippheuer.credentialmanager.domain.OAuth2Credential;
 import com.github.twitch4j.TwitchClient;
 import com.github.twitch4j.TwitchClientBuilder;
+import com.github.twitch4j.pubsub.events.HypeTrainLevelUpEvent;
+import pe.bazan.luis.plugins.twitchkillme.events.HypeTrainEvent;
 
 public class TwitchService {
   private TwitchKillMe twitchKillMe;
@@ -15,6 +17,10 @@ public class TwitchService {
     this.credential = new OAuth2Credential("twitch", twitchKillMe.getMainConfigManager().getTwitchToken());
     this.chatCredential = new OAuth2Credential("twitch", twitchKillMe.getMainConfigManager().getChatToken());
     this.client = buildClient();
+  }
+
+  public void registerEvents() {
+    client.getEventManager().onEvent(HypeTrainLevelUpEvent.class, HypeTrainEvent::onHypeTrain);
   }
 
   private TwitchClient buildClient() {
