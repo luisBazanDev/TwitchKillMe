@@ -6,7 +6,6 @@ import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
 
 public class HypeTrainEvent {
   public static void onHypeTrain(HypeTrainLevelUpEvent e) {
-    final String channelId = e.getChannelId();
     final Integer lvl = e.getData().getProgress().getLevel().getValue();
     TwitchKillMe.getInstance().getRewardsConfig().getRewards().forEach((s, reward) -> {
       if(!reward.activeHypeTrain(lvl)) return;
