@@ -19,6 +19,7 @@ public class RewardsConfig {
     public void registerConfig() {
       this.configFile = new CustomConfig("rewards.yml", plugin);
       configFile.registerConfig();
+      load();
     }
 
     public void load() {
