@@ -1,5 +1,7 @@
 package pe.bazan.luis.plugins.twitchkillme.instances;
 
+import org.bukkit.ChatColor;
+
 public class RewardFormat {
   final private String name;
   final private String player;
@@ -28,5 +30,9 @@ public class RewardFormat {
     text = text.replaceAll("%method%", method);
     text = text.replaceAll("%player%", player);
     return text;
+  }
+
+  public String replaceWithColors(String text) {
+    return ChatColor.translateAlternateColorCodes('&', replace(text));
   }
 }
