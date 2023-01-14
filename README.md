@@ -2,7 +2,7 @@
 - [x] Channel points support
 - [x] Hype Train support
 - [X] Method for send message to twitch
-- [ ] On reward run, execute notification on minecraft and twitch
+- [X] On reward run, execute notification on minecraft and twitch
 - [ ] Subscription support
 - [ ] Subscription gift support
 - [ ] Bits support

@@ -14,6 +14,7 @@ public class NotificationsConfig {
   public NotificationsConfig(TwitchKillMe plugin) {
     this.plugin = plugin;
     registerConfig();
+    load();
   }
 
   public void registerConfig() {
@@ -33,5 +34,9 @@ public class NotificationsConfig {
   public void reloadConfig() {
     configFile.reloadConfig();
     load();
+  }
+
+  public HashMap<String, Notification> getNotifications() {
+    return notifications;
   }
 }

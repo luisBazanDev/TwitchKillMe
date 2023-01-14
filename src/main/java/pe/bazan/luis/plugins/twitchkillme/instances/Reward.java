@@ -2,12 +2,13 @@ package pe.bazan.luis.plugins.twitchkillme.instances;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
+import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
 import pe.bazan.luis.plugins.twitchkillme.rewards.SummonReward;
 
 public class Reward {
   private String preset;
   private String name;
-  private String notification;
+  private Notification notification;
   private Integer points;
   private Integer bits;
   private Integer sub;
@@ -18,7 +19,7 @@ public class Reward {
   public Reward(ConfigurationSection conf) {
     this.preset = conf.getString("preset");
     this.name = conf.getString("name");
-    this.notification = conf.getString("notification");
+    this.notification = TwitchKillMe.getInstance().getNotificationsConfig().getNotifications().get(conf.getString("notification").toLowerCase());
     this.points = conf.getInt("active.points");
     this.bits = conf.getInt("active.bits");
     this.sub = conf.getInt("active.sub");
@@ -34,6 +35,8 @@ public class Reward {
           Player p
   ) {
     RewardFormat rewardFormat = new RewardFormat(this.name, username, amount, method, p.getName());
+
+    notification.notifyPlayer(rewardFormat, p);
 
     switch (preset) {
       case "summon":
