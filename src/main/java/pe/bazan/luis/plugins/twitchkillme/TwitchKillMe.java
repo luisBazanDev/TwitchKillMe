@@ -15,10 +15,10 @@ public final class TwitchKillMe extends JavaPlugin {
   @Override
   public void onEnable() {
     // Plugin startup logic
-    twitchService = new TwitchService(this);
     this.mainConfigManager = new MainConfigManager(this);
     this.rewardsConfig = new RewardsConfig(this);
     this.notificationsConfig = new NotificationsConfig(this);
+    twitchService = new TwitchService(this);
   }
 
   @Override
