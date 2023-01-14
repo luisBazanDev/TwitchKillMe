@@ -3,9 +3,9 @@
 - [x] Hype Train support
 - [X] Method for send message to twitch
 - [X] On reward run, execute notification on minecraft and twitch
+- [X] Bits support
 - [ ] Subscription support
 - [ ] Subscription gift support
-- [ ] Bits support
 - Presets
   - [x] Summon
   - [ ] Give

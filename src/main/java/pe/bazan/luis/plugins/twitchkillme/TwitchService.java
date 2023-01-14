@@ -3,8 +3,10 @@ package pe.bazan.luis.plugins.twitchkillme;
 import com.github.philippheuer.credentialmanager.domain.OAuth2Credential;
 import com.github.twitch4j.TwitchClient;
 import com.github.twitch4j.TwitchClientBuilder;
+import com.github.twitch4j.pubsub.events.ChannelBitsEvent;
 import com.github.twitch4j.pubsub.events.HypeTrainLevelUpEvent;
 import com.github.twitch4j.pubsub.events.RewardRedeemedEvent;
+import pe.bazan.luis.plugins.twitchkillme.events.BitsEvent;
 import pe.bazan.luis.plugins.twitchkillme.events.ChannelPointsEvent;
 import pe.bazan.luis.plugins.twitchkillme.events.HypeTrainEvent;
 
@@ -33,12 +35,14 @@ public class TwitchService {
   public void registerEvents() {
     client.getEventManager().onEvent(HypeTrainLevelUpEvent.class, HypeTrainEvent::onHypeTrain);
     client.getEventManager().onEvent(RewardRedeemedEvent.class, ChannelPointsEvent::onRewardRedeemed);
+    client.getEventManager().onEvent(ChannelBitsEvent.class, BitsEvent::onCheer);
   }
 
   public void subscribeTopics() {
     for (String channel : twitchKillMe.getMainConfigManager().getChannelsId()) {
       client.getPubSub().listenForChannelPointsRedemptionEvents(credential, channel);
       client.getPubSub().listenForHypeTrainEvents(credential, channel);
+      client.getPubSub().listenForCheerEvents(credential, channel);
     }
   }
 
