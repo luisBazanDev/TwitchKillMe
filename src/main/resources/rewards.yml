@@ -1,0 +1,28 @@
+#  PRESETS
+# summon
+# give
+# drop
+# tp
+# place
+# command
+# skin
+# random
+rewards:
+  0:
+    preset: "summon"
+    name: "Zombie"
+    notification: default
+    active:
+      points: 40
+      bits: 12
+      sub: 1
+      subs-gifts: 1
+      hype-train: 1
+    settings:
+      type: "ZOMBIE"
+      amount: 2
+      summon-radius: 3
+      name: "%username%'s"
+      equip-default: true
+      health: 20
+      top-world: false

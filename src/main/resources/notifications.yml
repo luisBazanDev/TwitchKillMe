@@ -1,0 +1,20 @@
+# Variables
+# %name% - Reward name
+# %username% - User's twitch name
+# %amount% - Amount for active this reward
+# %method% - Bits / Channel Points / Hype Train / Subs
+notifications:
+  default:
+    minecraft:
+      title:
+        content: "&f¡Reward! &a%name%"
+        fadein: 20
+        stay: 20
+        fadeout: 20
+      subtitle: "&f%method% &ax%amount%"
+      actionbar: "&fThanks &e%username%"
+    twitch: "¡Thanks %username% for you %name%!"
+    sound:
+      sound: "ENTITY_PLAYER_LEVELUP" # "" or https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+      pitch: 2 # 0 - 2
+      volume: 0.3 # 0 - 2
