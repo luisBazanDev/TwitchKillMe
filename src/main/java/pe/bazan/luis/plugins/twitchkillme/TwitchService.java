@@ -43,4 +43,8 @@ public class TwitchService {
             .withEnablePubSub(true)
             .build();
   }
+
+  public void sendMessage(String channelId, String msg) {
+    client.getChat().sendMessage(channelId, msg);
+  }
 }

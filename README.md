@@ -1,7 +1,7 @@
 # ToDo's
 - [x] Channel points support
 - [x] Hype Train support
-- [ ] Method for send message to twitch
+- [X] Method for send message to twitch
 - [ ] On reward run, execute notification on minecraft and twitch
 - [ ] Subscription support
 - [ ] Subscription gift support

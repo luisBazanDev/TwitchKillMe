@@ -27,6 +27,10 @@ public final class TwitchKillMe extends JavaPlugin {
     // Plugin shutdown logic
   }
 
+  public void sayTwitch(String channelId, String msg) {
+    twitchService.sendMessage(channelId, msg);
+  }
+
   public MainConfigManager getMainConfigManager() {
     return mainConfigManager;
   }
