@@ -2,6 +2,7 @@ package pe.bazan.luis.plugins.twitchkillme.instances;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
+import pe.bazan.luis.plugins.twitchkillme.rewards.SummonReward;
 
 public class Reward {
   private String preset;
@@ -32,7 +33,12 @@ public class Reward {
           String method,
           Player p
   ) {
-    RewardFormat rewardFormat = new RewardFormat(this.name, username, amount, method);
+    RewardFormat rewardFormat = new RewardFormat(this.name, username, amount, method, p.getName());
+
+    switch (preset) {
+      case "summon":
+        SummonReward.run(settings, p, this, rewardFormat);
+    }
   }
 
   public boolean activePoints(int amount) {
