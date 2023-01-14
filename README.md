@@ -1,3 +1,13 @@
+# Twitch Kill Me
+This is a popular event among streamers on twitch. So far the best way was a mod, mod is good but limited in some aspects and this plugin is here to cover these gaps.
+
+# Default config files
+- [config.yml](./src/main/resources/config.yml)
+- [notifications.yml](./src/main/resources/notifications.yml)
+- [rewards.yml](./src/main/resources/rewards.yml)
+
+# License [MIT](./LICENSE)
+
 # ToDo's
 - [x] Channel points support
 - [x] Hype Train support
