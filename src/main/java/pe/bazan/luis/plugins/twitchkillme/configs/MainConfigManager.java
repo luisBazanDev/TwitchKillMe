@@ -46,4 +46,8 @@ public class MainConfigManager {
     });
     return playerList;
   }
+
+  public List<String> getChannels() {
+    return configFile.getConfig().getStringList("twitch.channels");
+  }
 }
