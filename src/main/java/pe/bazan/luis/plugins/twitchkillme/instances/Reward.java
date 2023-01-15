@@ -1,5 +1,6 @@
 package pe.bazan.luis.plugins.twitchkillme.instances;
 
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
@@ -37,24 +38,26 @@ public class Reward {
           String channelId,
           Player p
   ) {
-    RewardFormat rewardFormat = new RewardFormat(this.name, username, amount, method, channelId, p.getName());
+    Bukkit.getScheduler().runTask(TwitchKillMe.getInstance(), () -> {
+      RewardFormat rewardFormat = new RewardFormat(this.name, username, amount, method, channelId, p.getName());
 
-    if(notification != null) {
-      notification.notifyPlayer(rewardFormat, p);
-      notification.notifyTwitch(rewardFormat);
-    }
+      if(notification != null) {
+        notification.notifyPlayer(rewardFormat, p);
+        notification.notifyTwitch(rewardFormat);
+      }
 
-    switch (preset) {
-      case "summon":
-        SummonReward.run(settings, p, this, rewardFormat);
-        break;
-      case "give":
-        GiveReward.run(settings, p, this, rewardFormat);
-        break;
-      case "armor":
-        ArmorReward.run(settings, p, this, rewardFormat);
-        break;
-    }
+      switch (preset) {
+        case "summon":
+          SummonReward.run(settings, p, this, rewardFormat);
+          break;
+        case "give":
+          GiveReward.run(settings, p, this, rewardFormat);
+          break;
+        case "armor":
+          ArmorReward.run(settings, p, this, rewardFormat);
+          break;
+      }
+    });
   }
 
   public boolean activePoints(int amount) {
