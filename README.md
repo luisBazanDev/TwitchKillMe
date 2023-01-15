@@ -16,6 +16,10 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] Bits support
 - [X] Subscription support
 - [X] Subscription gift support
+- [ ] Main command
+- [ ] Permissions
+- [ ] Reload command
+- [ ] Wiki
 - [ ] User community Points Support
 - [ ] Raid's support
 - Presets
@@ -38,10 +42,3 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [ ] Particles
   - [ ] Fireworks
   - [ ] Gamemode
-- [ ] Main command
-- [ ] Reload command
-- [ ] Permissions
-- [ ] Wiki
-- [ ] ...
-- [ ] ...
-- [ ] ...
