@@ -8,7 +8,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 
 ## License [MIT](./LICENSE)
 
-## ToDo's
+## To-Do's
 - [x] Channel points support
 - [x] Hype Train support
 - [X] Method for send message to twitch

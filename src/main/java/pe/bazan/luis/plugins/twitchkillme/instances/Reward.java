@@ -84,4 +84,20 @@ public class Reward {
     if(hypeTrain == null) return false;
     return hypeTrain == level;
   }
+
+  public String getPreset() {
+    return preset;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public Notification getNotification() {
+    return notification;
+  }
+
+  public ConfigurationSection getSettings() {
+    return settings;
+  }
 }
