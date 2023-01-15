@@ -18,7 +18,8 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [ ] Subscription gift support
 - Presets
   - [x] Summon
-  - [ ] Give
+  - [X] Give
+  - [ ] Armor
   - [ ] Drop
   - [ ] Tp
   - [ ] Place

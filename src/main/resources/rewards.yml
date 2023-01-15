@@ -26,3 +26,21 @@ rewards:
       equip-default: true
       health: 20
       top-world: false
+  1:
+    preset: "give"
+    name: "Potato"
+    notification: default
+    active:
+      points: 40
+      bits: 12
+      sub: 1
+      subs-gifts: 1
+      hype-train: 1
+    settings:
+      slot: -1
+      amount: 2
+      custom-model: 0
+      material: "POTATO"
+      name: "&e&lPotato"
+      lore:
+        - "&f&lPotato &d&lreward"

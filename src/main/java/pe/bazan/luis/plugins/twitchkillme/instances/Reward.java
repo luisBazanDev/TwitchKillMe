@@ -3,6 +3,7 @@ package pe.bazan.luis.plugins.twitchkillme.instances;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
+import pe.bazan.luis.plugins.twitchkillme.rewards.GiveReward;
 import pe.bazan.luis.plugins.twitchkillme.rewards.SummonReward;
 
 public class Reward {
@@ -45,6 +46,8 @@ public class Reward {
     switch (preset) {
       case "summon":
         SummonReward.run(settings, p, this, rewardFormat);
+      case "give":
+        GiveReward.run(settings, p, this, rewardFormat);
     }
   }
 
