@@ -26,12 +26,8 @@ public class MainCommand implements CommandExecutor, TabCompleter {
 
   @Override
   public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
-    if(!(sender instanceof Player)){
-      return false;
-    }
-
     if(args.length == 1 && args[0].equalsIgnoreCase("reload")){
-      if(sender.isOp()){
+      if(sender.hasPermission("tkm.commands.reload")){
         plugin.reload();
         sender.sendMessage(MessageFormat.formatMC(
                 "&aRewards loaded: &e"
@@ -48,6 +44,10 @@ public class MainCommand implements CommandExecutor, TabCompleter {
         sender.sendMessage(MessageFormat.formatMC("&aConfig reload!"));
       }
       return true;
+    }
+
+    if(!(sender instanceof Player)){
+      return false;
     }
 
     return true;
