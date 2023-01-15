@@ -15,7 +15,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] On reward run, execute notification on minecraft and twitch
 - [X] Bits support
 - [X] Subscription support
-- [ ] Subscription gift support
+- [X] Subscription gift support
 - Presets
   - [x] Summon
   - [X] Give
