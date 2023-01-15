@@ -19,7 +19,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] Main command
 - [X] Permissions
 - [X] Reload command
-- [ ] Enable and disable system
+- [X] Enable and disable system
 - [ ] Save rewards on system disable, and save on cache file
 - [ ] Wiki
 - [ ] User community Points Support

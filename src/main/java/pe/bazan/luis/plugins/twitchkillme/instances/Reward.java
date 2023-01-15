@@ -38,6 +38,7 @@ public class Reward {
           String channelId,
           Player p
   ) {
+    if(!TwitchKillMe.getInstance().isEnable()) return;
     Bukkit.getScheduler().runTask(TwitchKillMe.getInstance(), () -> {
       RewardFormat rewardFormat = new RewardFormat(this.name, username, amount, method, channelId, p.getName());
 

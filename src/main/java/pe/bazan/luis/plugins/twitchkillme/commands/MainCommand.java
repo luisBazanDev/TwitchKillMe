@@ -46,6 +46,13 @@ public class MainCommand implements CommandExecutor, TabCompleter {
       return true;
     }
 
+    if(args.length == 1 && args[0].equalsIgnoreCase("toggle")){
+      if(!sender.hasPermission("tkm.commands.toggle")) return true;
+      plugin.setEnable(!plugin.isEnable());
+      sender.sendMessage(MessageFormat.formatMC("&aTwitch kill me system is now " + (plugin.isEnable() ? "&aEnable" : "&cDisable")));
+      return true;
+    }
+
     if(!(sender instanceof Player)){
       return false;
     }
@@ -56,7 +63,7 @@ public class MainCommand implements CommandExecutor, TabCompleter {
   @Override
   public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
     if(args.length == 1) {
-      return new ArrayList<>(Arrays.asList("reload"));
+      return new ArrayList<>(Arrays.asList("reload", "toggle"));
     }
     return null;
   }

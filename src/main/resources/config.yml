@@ -1,3 +1,5 @@
+enable: false
+
 twitch:
   token: "YOUR TOKEN"
   chat-token: "" # "" use token default
