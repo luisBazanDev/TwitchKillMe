@@ -16,9 +16,9 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] Bits support
 - [X] Subscription support
 - [X] Subscription gift support
-- [ ] Main command
-- [ ] Permissions
-- [ ] Reload command
+- [X] Main command
+- [X] Permissions
+- [X] Reload command
 - [ ] Wiki
 - [ ] User community Points Support
 - [ ] Raid's support
