@@ -34,10 +34,18 @@ public class ArmorReward {
     itemStack.setItemMeta(itemMeta);
 
     switch (settings.getString("slot")) {
-      case "helmet": p.getInventory().setHelmet(itemStack);
-      case "chestplate": p.getInventory().setChestplate(itemStack);
-      case "leggings": p.getInventory().setLeggings(itemStack);
-      case "boots": p.getInventory().setBoots(itemStack);
+      case "helmet":
+        p.getInventory().setHelmet(itemStack);
+        break;
+      case "chestplate":
+        p.getInventory().setChestplate(itemStack);
+        break;
+      case "leggings":
+        p.getInventory().setLeggings(itemStack);
+        break;
+      case "boots":
+        p.getInventory().setBoots(itemStack);
+        break;
     }
   }
 }

@@ -47,10 +47,13 @@ public class Reward {
     switch (preset) {
       case "summon":
         SummonReward.run(settings, p, this, rewardFormat);
+        break;
       case "give":
         GiveReward.run(settings, p, this, rewardFormat);
+        break;
       case "armor":
         ArmorReward.run(settings, p, this, rewardFormat);
+        break;
     }
   }
 
