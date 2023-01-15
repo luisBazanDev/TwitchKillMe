@@ -1,6 +1,7 @@
 package pe.bazan.luis.plugins.twitchkillme;
 
 import org.bukkit.plugin.java.JavaPlugin;
+import pe.bazan.luis.plugins.twitchkillme.commands.MainCommand;
 import pe.bazan.luis.plugins.twitchkillme.configs.MainConfigManager;
 import pe.bazan.luis.plugins.twitchkillme.configs.NotificationsConfig;
 import pe.bazan.luis.plugins.twitchkillme.configs.RewardsConfig;
@@ -20,6 +21,7 @@ public final class TwitchKillMe extends JavaPlugin {
     this.notificationsConfig = new NotificationsConfig(this);
     this.rewardsConfig = new RewardsConfig(this);
     twitchService = new TwitchService(this);
+    new MainCommand(this);
   }
 
   @Override
@@ -49,5 +51,11 @@ public final class TwitchKillMe extends JavaPlugin {
 
   public TwitchService getTwitchService() {
     return twitchService;
+  }
+
+  public void reload() {
+    this.mainConfigManager.reloadConfig();
+    this.notificationsConfig.reloadConfig();
+    this.rewardsConfig.reloadConfig();
   }
 }

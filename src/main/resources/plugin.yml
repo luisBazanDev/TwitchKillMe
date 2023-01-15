@@ -4,3 +4,7 @@ version: '${project.version}'
 main: pe.bazan.luis.plugins.twitchkillme.TwitchKillMe
 api-version: 1.19
 authors: [ "Luis Bazán" ]
+commands:
+  twitchkillme:
+    permission: "tkm.commands"
+    aliases: ["tkm"]
