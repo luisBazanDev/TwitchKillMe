@@ -16,6 +16,8 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] Bits support
 - [X] Subscription support
 - [X] Subscription gift support
+- [ ] User community Points Support
+- [ ] Raid's support
 - Presets
   - [x] Summon
   - [X] Give
@@ -30,6 +32,12 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [ ] Random preset
   - [ ] Void a chunk
   - [ ] Randomizer inventory
+  - [ ] Clear inventory
+  - [ ] Structure, datapack or schematic
+  - [ ] Potion effect
+  - [ ] Particles
+  - [ ] Fireworks
+  - [ ] Gamemode
 - [ ] ...
 - [ ] ...
 - [ ] ...

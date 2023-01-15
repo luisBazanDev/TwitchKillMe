@@ -1,4 +1,5 @@
 name: TwitchKillMe
+description: Twitch kill me event for streamers
 version: '${project.version}'
 main: pe.bazan.luis.plugins.twitchkillme.TwitchKillMe
 api-version: 1.19
