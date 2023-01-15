@@ -23,12 +23,12 @@ public class GiveReward {
       itemStack.setAmount(settings.getInt("amount"));
     }
     if(settings.getString("name") != null) {
-      itemMeta.setDisplayName(MessageFormat.formatMCTxt(settings.getString("name")));
+      itemMeta.setDisplayName(format.replaceWithColors(settings.getString("name")));
     }
     if(settings.getStringList("lore") != null) {
       List<String> lore = new ArrayList<>();
       settings.getStringList("lore").forEach((line) -> {
-        lore.add(MessageFormat.formatMCTxt(line));
+        lore.add(format.replaceWithColors(line));
       });
       itemMeta.setLore(lore);
     }
