@@ -38,6 +38,7 @@ public class Reward {
           String channelId,
           Player p
   ) {
+    if(!TwitchKillMe.getInstance().isEnable()) return;
     Bukkit.getScheduler().runTask(TwitchKillMe.getInstance(), () -> {
       RewardFormat rewardFormat = new RewardFormat(this.name, username, amount, method, channelId, p.getName());
 
@@ -83,5 +84,21 @@ public class Reward {
   public boolean activeHypeTrain(int level) {
     if(hypeTrain == null) return false;
     return hypeTrain == level;
+  }
+
+  public String getPreset() {
+    return preset;
+  }
+
+  public String getName() {
+    return name;
+  }
+
+  public Notification getNotification() {
+    return notification;
+  }
+
+  public ConfigurationSection getSettings() {
+    return settings;
   }
 }

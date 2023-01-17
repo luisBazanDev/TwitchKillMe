@@ -6,9 +6,18 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [notifications.yml](./src/main/resources/notifications.yml)
 - [rewards.yml](./src/main/resources/rewards.yml)
 
+## Commands
+- /twitchkillme reload - Reload config.
+- /twitchkillme toggle - Enable or disable rewards
+
+## Permissions
+- `tkm.commands` - Main command
+- `tkm.commands.reload` - Reload config
+- `tkm.commands.toggle` - Toggle rewards
+
 ## License [MIT](./LICENSE)
 
-## ToDo's
+## To-Do's
 - [x] Channel points support
 - [x] Hype Train support
 - [X] Method for send message to twitch
@@ -16,6 +25,12 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] Bits support
 - [X] Subscription support
 - [X] Subscription gift support
+- [X] Main command
+- [X] Permissions
+- [X] Reload command
+- [X] Enable and disable system
+- [ ] Save rewards on system disable, and save on cache file
+- [ ] Wiki
 - [ ] User community Points Support
 - [ ] Raid's support
 - Presets
@@ -38,8 +53,3 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [ ] Particles
   - [ ] Fireworks
   - [ ] Gamemode
-- [ ] ...
-- [ ] ...
-- [ ] ...
-- [ ] ...
-- [ ] ...

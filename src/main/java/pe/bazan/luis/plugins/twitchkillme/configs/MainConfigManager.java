@@ -69,4 +69,12 @@ public class MainConfigManager {
   public HashMap<String, String> getChannels() {
     return channels;
   }
+
+  public boolean getEnable() {
+    return configFile.getConfig().getBoolean("enable");
+  }
+
+  public void setEnable(boolean enable) {
+    configFile.getConfig().set("enable", enable);
+  }
 }
