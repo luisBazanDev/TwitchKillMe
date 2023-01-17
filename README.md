@@ -6,6 +6,15 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [notifications.yml](./src/main/resources/notifications.yml)
 - [rewards.yml](./src/main/resources/rewards.yml)
 
+## Commands
+- /twitchkillme reload - Reload config.
+- /twitchkillme toggle - Enable or disable rewards
+
+## Permissions
+- `tkm.commands` - Main command
+- `tkm.commands.reload` - Reload config
+- `tkm.commands.toggle` - Toggle rewards
+
 ## License [MIT](./LICENSE)
 
 ## To-Do's
