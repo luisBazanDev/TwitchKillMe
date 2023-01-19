@@ -58,3 +58,11 @@ rewards:
         - "&7by &fNASA&7. And it was used"
         - "&7in the &eApollo missions&7."
         - "&7The specific mission is 11."
+  3:
+    preset: "drop"
+    name: "Drop item in main hand"
+    notification: default
+    active:
+      points: 40
+    settings:
+      slot: "main-hand" # helmet | chestplate | leggings | boots | main-hand | off-hand | random | 1,2,3,4,5...

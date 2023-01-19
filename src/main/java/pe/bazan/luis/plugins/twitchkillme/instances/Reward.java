@@ -5,6 +5,7 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
 import pe.bazan.luis.plugins.twitchkillme.rewards.ArmorReward;
+import pe.bazan.luis.plugins.twitchkillme.rewards.DropReward;
 import pe.bazan.luis.plugins.twitchkillme.rewards.GiveReward;
 import pe.bazan.luis.plugins.twitchkillme.rewards.SummonReward;
 
@@ -56,6 +57,9 @@ public class Reward {
           break;
         case "armor":
           ArmorReward.run(settings, p, this, rewardFormat);
+          break;
+        case "drop":
+          DropReward.run(settings, p, this, rewardFormat);
           break;
       }
     });

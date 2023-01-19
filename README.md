@@ -39,7 +39,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [x] Summon
   - [X] Give
   - [X] Armor
-  - [ ] Drop
+  - [X] Drop
   - [ ] Tp
   - [ ] Place
   - [ ] Run console command
