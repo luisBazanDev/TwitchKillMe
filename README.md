@@ -14,6 +14,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - `tkm.commands` - Main command
 - `tkm.commands.reload` - Reload config
 - `tkm.commands.toggle` - Toggle rewards
+- `tkm.commands.test` - Test reward
 
 ## License [MIT](./LICENSE)
 
@@ -29,6 +30,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] Permissions
 - [X] Reload command
 - [X] Enable and disable system
+- [X] Test command
 - [ ] Save rewards on system disable, and save on cache file
 - [ ] Wiki
 - [ ] User community Points Support

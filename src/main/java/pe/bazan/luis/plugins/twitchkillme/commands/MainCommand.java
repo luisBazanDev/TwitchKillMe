@@ -7,6 +7,7 @@ import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.Player;
 import pe.bazan.luis.plugins.twitchkillme.MessageFormat;
 import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
+import pe.bazan.luis.plugins.twitchkillme.instances.Reward;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -57,13 +58,28 @@ public class MainCommand implements CommandExecutor, TabCompleter {
       return false;
     }
 
+    if(args.length == 2 && args[0].equalsIgnoreCase("test")){
+      if(!sender.hasPermission("tkm.commands.test")) return true;
+      Reward reward = plugin.getRewardsConfig().getRewards().get(args[1]);
+      if(reward == null) {
+        sender.sendMessage(MessageFormat.formatMC(String.format("&cDon't found &e\"%s\"", args[1])));
+        return false;
+      }
+      reward.runReward("dummy", "12", "command", plugin.getMainConfigManager().getChannelsId().get(0), (Player) sender);
+      return true;
+    }
+
     return true;
   }
 
   @Override
   public List<String> onTabComplete(CommandSender sender, Command command, String label, String[] args) {
     if(args.length == 1) {
-      return new ArrayList<>(Arrays.asList("reload", "toggle"));
+      return new ArrayList<>(Arrays.asList("reload", "toggle", "test"));
+    }
+
+    if(args.length == 2 && args[0].equalsIgnoreCase("test")) {
+      return new ArrayList<>(plugin.getRewardsConfig().getRewards().keySet());
     }
     return null;
   }
