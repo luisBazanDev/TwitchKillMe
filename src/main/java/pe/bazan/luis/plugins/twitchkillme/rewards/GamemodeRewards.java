@@ -1,6 +1,5 @@
 package pe.bazan.luis.plugins.twitchkillme.rewards;
 
-import net.kyori.adventure.text.Component;
 import org.bukkit.Bukkit;
 import org.bukkit.GameMode;
 import org.bukkit.boss.BarColor;
@@ -8,10 +7,7 @@ import org.bukkit.boss.BarStyle;
 import org.bukkit.boss.BossBar;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
-import org.bukkit.scheduler.BukkitTask;
-import org.jetbrains.annotations.NotNull;
 import pe.bazan.luis.plugins.twitchkillme.MessageFormat;
 import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
 import pe.bazan.luis.plugins.twitchkillme.instances.Reward;
@@ -20,7 +16,7 @@ import pe.bazan.luis.plugins.twitchkillme.instances.RewardFormat;
 import java.text.DecimalFormat;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class Gamemode {
+public class GamemodeRewards {
   public static void run(ConfigurationSection settings, Player p, Reward reward, RewardFormat format) {
     GameMode lastMode = p.getGameMode();
     GameMode newMode = null;
