@@ -61,6 +61,9 @@ public class Reward {
         case "console-command":
           ConsoleCommandReward.run(settings, p, this, rewardFormat);
           break;
+        case "gamemode":
+          ConsoleCommandReward.run(settings, p, this, rewardFormat);
+          break;
       }
     });
   }
