@@ -4,10 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
-import pe.bazan.luis.plugins.twitchkillme.rewards.ArmorReward;
-import pe.bazan.luis.plugins.twitchkillme.rewards.DropReward;
-import pe.bazan.luis.plugins.twitchkillme.rewards.GiveReward;
-import pe.bazan.luis.plugins.twitchkillme.rewards.SummonReward;
+import pe.bazan.luis.plugins.twitchkillme.rewards.*;
 
 public class Reward {
   private String preset;
@@ -60,6 +57,9 @@ public class Reward {
           break;
         case "drop":
           DropReward.run(settings, p, this, rewardFormat);
+          break;
+        case "console-command":
+          ConsoleCommandReward.run(settings, p, this, rewardFormat);
           break;
       }
     });

@@ -40,9 +40,9 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [X] Give
   - [X] Armor
   - [X] Drop
+  - [X] Run console command
   - [ ] Tp
   - [ ] Place
-  - [ ] Run console command
   - [ ] Run player command
   - [ ] Tp to world
   - [ ] Skin

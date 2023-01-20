@@ -63,6 +63,17 @@ rewards:
     name: "Drop item in main hand"
     notification: default
     active:
-      points: 40
+      points: 30
     settings:
       slot: "main-hand" # helmet | chestplate | leggings | boots | main-hand | off-hand | random | 1,2,3,4,5...
+  4:
+    preset: "console-command"
+    name: "Insta kill"
+    notification: default
+    active:
+      points: 40
+    settings:
+      interval: 0 # in ticks
+      commands:
+        - "kill %player%"
+        - "say ¡You died!"
