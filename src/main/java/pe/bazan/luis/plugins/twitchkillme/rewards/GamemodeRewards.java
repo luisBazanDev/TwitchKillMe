@@ -66,7 +66,7 @@ public class GamemodeRewards {
     public void run() {
       player.sendActionBar(MessageFormat.formatMC(String.format(
               "&fGamemode &e%ss",
-              decimalFormat.format(decimalFormat)
+              decimalFormat.format(time)
       )));
       if(time <= 0) {
         player.sendActionBar(MessageFormat.formatMC(""));
@@ -88,7 +88,7 @@ public class GamemodeRewards {
       this.player = player;
       this.time = time;
       this.bossBar = Bukkit.createBossBar(
-              MessageFormat.formatMCTxt(String.format("&fGamemode &e%ss", decimalFormat.format(decimalFormat))),
+              MessageFormat.formatMCTxt(String.format("&fGamemode &e%ss", decimalFormat.format(time))),
               BarColor.WHITE,
               BarStyle.SOLID
       );
@@ -98,8 +98,9 @@ public class GamemodeRewards {
 
     @Override
     public void run() {
-      bossBar.setProgress(time/totalTime);
-      bossBar.setTitle(MessageFormat.formatMCTxt(String.format("&fGamemode &e%ss", decimalFormat.format(decimalFormat))));
+      bossBar.setProgress((double) time / totalTime);
+      System.out.println(bossBar.getProgress());
+      bossBar.setTitle(MessageFormat.formatMCTxt(String.format("&fGamemode &e%ss", decimalFormat.format(time))));
       if(time <= 0) {
         bossBar.removeAll();
         cancel();
