@@ -8,13 +8,16 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 
 ## Commands
 - /twitchkillme reload - Reload config.
-- /twitchkillme toggle - Enable or disable rewards
+- /twitchkillme toggle - Enable or disable rewards.
+- /twitchkillme test <reward-id> - Run reward as test.
 
 ## Permissions
 - `tkm.commands` - Main command
 - `tkm.commands.reload` - Reload config
 - `tkm.commands.toggle` - Toggle rewards
 - `tkm.commands.test` - Test reward
+
+## [Spigot page](https://www.spigotmc.org/resources/twitchkillme.107399/)
 
 ## License [MIT](./LICENSE)
 
@@ -41,6 +44,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [X] Armor
   - [X] Drop
   - [X] Run console command
+  - [X] Gamemode
   - [ ] Tp
   - [ ] Place
   - [ ] Run player command
@@ -54,4 +58,3 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [ ] Potion effect
   - [ ] Particles
   - [ ] Fireworks
-  - [ ] Gamemode

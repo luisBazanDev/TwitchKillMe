@@ -77,3 +77,13 @@ rewards:
       commands:
         - "kill %player%"
         - "say ¡You died!"
+  5:
+    preset: "gamemode"
+    name: "Creative"
+    notification: default
+    active:
+      points: 40
+    settings:
+      gamemode: "creative" # survival, creative, adventure, spectator
+      time: 10 # Seconds
+      alert: "actionbar" # actionbar, bossbar
