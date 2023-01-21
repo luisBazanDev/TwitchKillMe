@@ -47,7 +47,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [X] Gamemode
   - [X] Void a chunk
   - [X] Freeze Player
-  - [ ] Tp
+  - [X] Tp
   - [ ] Place
   - [ ] Run player command
   - [ ] Tp to world

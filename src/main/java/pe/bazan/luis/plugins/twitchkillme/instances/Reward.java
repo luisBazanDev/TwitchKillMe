@@ -70,6 +70,9 @@ public class Reward {
         case "freeze":
           FreezeReward.run(settings, p, this, rewardFormat);
           break;
+        case "tp":
+          TpReward.run(settings, p, this, rewardFormat);
+          break;
       }
     });
   }

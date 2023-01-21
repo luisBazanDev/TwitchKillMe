@@ -102,3 +102,20 @@ rewards:
     settings:
       time: 10 # Seconds
       alert: "actionbar" # actionbar, bossbar
+  8:
+    preset: "tp"
+    name: "Water drop"
+    notification: default
+    active:
+      points: 40
+    settings:
+      center: self # self, world, world:world
+      x:
+        min: 0
+        max: 0
+      y:
+        min: 20
+        max: 20
+      z:
+        min: 0
+        max: 0
