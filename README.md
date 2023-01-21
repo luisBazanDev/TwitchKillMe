@@ -8,12 +8,16 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 
 ## Commands
 - /twitchkillme reload - Reload config.
-- /twitchkillme toggle - Enable or disable rewards
+- /twitchkillme toggle - Enable or disable rewards.
+- /twitchkillme test <reward-id> - Run reward as test.
 
 ## Permissions
 - `tkm.commands` - Main command
 - `tkm.commands.reload` - Reload config
 - `tkm.commands.toggle` - Toggle rewards
+- `tkm.commands.test` - Test reward
+
+## [Spigot page](https://www.spigotmc.org/resources/twitchkillme.107399/)
 
 ## License [MIT](./LICENSE)
 
@@ -29,6 +33,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] Permissions
 - [X] Reload command
 - [X] Enable and disable system
+- [X] Test command
 - [ ] Save rewards on system disable, and save on cache file
 - [ ] Wiki
 - [ ] User community Points Support
@@ -37,19 +42,21 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [x] Summon
   - [X] Give
   - [X] Armor
-  - [ ] Drop
-  - [ ] Tp
+  - [X] Drop
+  - [X] Run console command
+  - [X] Gamemode
+  - [X] Void a chunk
+  - [X] Freeze Player
+  - [X] Tp
   - [ ] Place
-  - [ ] Run console command
   - [ ] Run player command
   - [ ] Tp to world
   - [ ] Skin
   - [ ] Random preset
-  - [ ] Void a chunk
   - [ ] Randomizer inventory
   - [ ] Clear inventory
   - [ ] Structure, datapack or schematic
   - [ ] Potion effect
   - [ ] Particles
   - [ ] Fireworks
-  - [ ] Gamemode
+  - [ ] Potions rain

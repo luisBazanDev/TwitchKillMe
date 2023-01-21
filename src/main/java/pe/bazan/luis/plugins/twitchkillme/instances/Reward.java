@@ -4,9 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
-import pe.bazan.luis.plugins.twitchkillme.rewards.ArmorReward;
-import pe.bazan.luis.plugins.twitchkillme.rewards.GiveReward;
-import pe.bazan.luis.plugins.twitchkillme.rewards.SummonReward;
+import pe.bazan.luis.plugins.twitchkillme.rewards.*;
 
 public class Reward {
   private String preset;
@@ -38,7 +36,7 @@ public class Reward {
           String channelId,
           Player p
   ) {
-    if(!TwitchKillMe.getInstance().isEnable()) return;
+    if(!TwitchKillMe.getInstance().isEnable() && !method.equalsIgnoreCase("command")) return;
     Bukkit.getScheduler().runTask(TwitchKillMe.getInstance(), () -> {
       RewardFormat rewardFormat = new RewardFormat(this.name, username, amount, method, channelId, p.getName());
 
@@ -56,6 +54,24 @@ public class Reward {
           break;
         case "armor":
           ArmorReward.run(settings, p, this, rewardFormat);
+          break;
+        case "drop":
+          DropReward.run(settings, p, this, rewardFormat);
+          break;
+        case "console-command":
+          ConsoleCommandReward.run(settings, p, this, rewardFormat);
+          break;
+        case "gamemode":
+          GamemodeRewards.run(settings, p, this, rewardFormat);
+          break;
+        case "void-chunk":
+          VoidChunkReward.run(settings, p, this, rewardFormat);
+          break;
+        case "freeze":
+          FreezeReward.run(settings, p, this, rewardFormat);
+          break;
+        case "tp":
+          TpReward.run(settings, p, this, rewardFormat);
           break;
       }
     });

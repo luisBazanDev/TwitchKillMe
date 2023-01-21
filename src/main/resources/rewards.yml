@@ -58,3 +58,64 @@ rewards:
         - "&7by &fNASA&7. And it was used"
         - "&7in the &eApollo missions&7."
         - "&7The specific mission is 11."
+  3:
+    preset: "drop"
+    name: "Drop item in main hand"
+    notification: default
+    active:
+      points: 30
+    settings:
+      slot: "main-hand" # helmet | chestplate | leggings | boots | main-hand | off-hand | random | 1,2,3,4,5...
+  4:
+    preset: "console-command"
+    name: "Insta kill"
+    notification: default
+    active:
+      points: 40
+    settings:
+      interval: 0 # in ticks
+      commands:
+        - "kill %player%"
+        - "say ¡You died!"
+  5:
+    preset: "gamemode"
+    name: "Creative"
+    notification: default
+    active:
+      points: 40
+    settings:
+      gamemode: "creative" # survival, creative, adventure, spectator
+      time: 10 # Seconds
+      alert: "actionbar" # actionbar, bossbar
+  6:
+    preset: "void-chunk"
+    name: "Void Chunk"
+    notification: default
+    active:
+      points: 40
+  7:
+    preset: "freeze"
+    name: "Freeze"
+    notification: default
+    active:
+      points: 40
+    settings:
+      time: 10 # Seconds
+      alert: "actionbar" # actionbar, bossbar
+  8:
+    preset: "tp"
+    name: "Water drop"
+    notification: default
+    active:
+      points: 40
+    settings:
+      center: self # self, world, world:world
+      x:
+        min: 0
+        max: 0
+      y:
+        min: 20
+        max: 20
+      z:
+        min: 0
+        max: 0
