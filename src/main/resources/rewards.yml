@@ -1,12 +1,13 @@
 #  PRESETS
 # summon
 # give
+# armor
 # drop
+# console-command
+# gamemode
+# void-chunk
+# freeze
 # tp
-# place
-# command
-# skin
-# random
 rewards:
   0:
     preset: "summon"
