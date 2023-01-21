@@ -93,3 +93,12 @@ rewards:
     notification: default
     active:
       points: 40
+  7:
+    preset: "freeze"
+    name: "Freeze"
+    notification: default
+    active:
+      points: 40
+    settings:
+      time: 10 # Seconds
+      alert: "actionbar" # actionbar, bossbar

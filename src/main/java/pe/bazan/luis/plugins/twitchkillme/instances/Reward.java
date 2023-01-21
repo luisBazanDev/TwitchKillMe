@@ -67,6 +67,9 @@ public class Reward {
         case "void-chunk":
           VoidChunkReward.run(settings, p, this, rewardFormat);
           break;
+        case "freeze":
+          FreezeReward.run(settings, p, this, rewardFormat);
+          break;
       }
     });
   }

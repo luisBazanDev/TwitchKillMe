@@ -46,7 +46,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [X] Run console command
   - [X] Gamemode
   - [X] Void a chunk
-  - [ ] Freeze Player
+  - [X] Freeze Player
   - [ ] Tp
   - [ ] Place
   - [ ] Run player command
