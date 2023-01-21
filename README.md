@@ -59,3 +59,4 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [ ] Potion effect
   - [ ] Particles
   - [ ] Fireworks
+  - [ ] Potions rain
