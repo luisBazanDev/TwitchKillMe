@@ -64,6 +64,9 @@ public class Reward {
         case "gamemode":
           GamemodeRewards.run(settings, p, this, rewardFormat);
           break;
+        case "void-chunk":
+          VoidChunkReward.run(settings, p, this, rewardFormat);
+          break;
       }
     });
   }

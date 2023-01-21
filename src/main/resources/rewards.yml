@@ -87,3 +87,9 @@ rewards:
       gamemode: "creative" # survival, creative, adventure, spectator
       time: 10 # Seconds
       alert: "actionbar" # actionbar, bossbar
+  6:
+    preset: "void-chunk"
+    name: "Void Chunk"
+    notification: default
+    active:
+      points: 40

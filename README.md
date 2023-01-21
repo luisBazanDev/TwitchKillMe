@@ -45,13 +45,14 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [X] Drop
   - [X] Run console command
   - [X] Gamemode
+  - [X] Void a chunk
+  - [ ] Freeze Player
   - [ ] Tp
   - [ ] Place
   - [ ] Run player command
   - [ ] Tp to world
   - [ ] Skin
   - [ ] Random preset
-  - [ ] Void a chunk
   - [ ] Randomizer inventory
   - [ ] Clear inventory
   - [ ] Structure, datapack or schematic
