@@ -13,7 +13,7 @@ public class ChannelPointsEvent {
       if(!reward.activePoints(amount)) return;
 
       for(Player p : TwitchKillMe.getInstance().getMainConfigManager().getPlayers()) {
-        reward.runReward(username, String.valueOf(amount), "Channel points", channelId, p);
+        reward.runReward(username, String.valueOf(amount), TwitchKillMe.getInstance().getMsg("events.channel-points"), channelId, p);
       }
     });
   }

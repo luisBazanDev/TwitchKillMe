@@ -13,7 +13,7 @@ public class SubscriptionsGiftEvent {
       if(!reward.activeSubGift(amount)) return;
 
       for(Player p : TwitchKillMe.getInstance().getMainConfigManager().getPlayers()) {
-        reward.runReward(username, String.valueOf(amount), "Subscription gift", channelId, p);
+        reward.runReward(username, String.valueOf(amount), TwitchKillMe.getInstance().getMsg("events.sub-gift"), channelId, p);
       }
     });
   }
