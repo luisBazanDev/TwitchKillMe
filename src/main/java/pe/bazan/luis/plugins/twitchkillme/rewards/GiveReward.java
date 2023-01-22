@@ -5,7 +5,6 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import pe.bazan.luis.plugins.twitchkillme.MessageFormat;
 import pe.bazan.luis.plugins.twitchkillme.instances.Reward;
 import pe.bazan.luis.plugins.twitchkillme.instances.RewardFormat;
 

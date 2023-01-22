@@ -11,7 +11,7 @@ public class HypeTrainEvent {
     TwitchKillMe.getInstance().getRewardsConfig().getRewards().forEach((s, reward) -> {
       if(!reward.activeHypeTrain(lvl)) return;
       for(Player p : TwitchKillMe.getInstance().getMainConfigManager().getPlayers()) {
-        reward.runReward("Everyone", String.valueOf(lvl), "Hype Train", channelId, p);
+        reward.runReward("Everyone", String.valueOf(lvl), TwitchKillMe.getInstance().getMsg("events.hype-train"), channelId, p);
       }
     });
   }

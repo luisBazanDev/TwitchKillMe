@@ -1,0 +1,23 @@
+# Translated by Luis Bazán
+all:
+  prefix: "&d&lTKM&f» &r"
+  enable: "&aActivado"
+  disable: "&cDesactivada"
+commands:
+  reload:
+    confirmation: "&aConfiguración recargada!"
+    title: "&aRecompensas cargadas: &e"
+    format: "&eID: &f%s &e- Nombre: &f%s &e- Preset: &f%s"
+  toggle: "&fEl sistema ahora está"
+  test:
+    error: "&cRecompensa no encontrada &e\"%s\""
+    success: "&aTest correcto."
+events:
+  bits: "Bits"
+  channel-points: "Puntos del canal"
+  hype-train: "Tren del hype"
+  sub: "Suscripción"
+  sub-gift: "Suscripción regalada"
+rewards:
+  freeze: "&bCongelado &e%ss"
+  gamemode: "&fModo de juego &e%ss"

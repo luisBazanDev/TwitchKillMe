@@ -34,7 +34,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] Reload command
 - [X] Enable and disable system
 - [X] Test command
-- [ ] Multi-languages support
+- [X] Multi-languages support
 - [ ] Save rewards on system disable, and save on cache file
 - [ ] Wiki
 - [ ] User community Points Support

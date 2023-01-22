@@ -1,0 +1,22 @@
+all:
+  prefix: "&d&lTKM&f» &r"
+  enable: "&aEnable"
+  disable: "&cDisable"
+commands:
+  reload:
+    confirmation: "&aConfig reload!"
+    title: "&aRewards loaded: &e"
+    format: "&eID: &f%s &e- Name: &f%s &e- Preset: &f%s"
+  toggle: "&fSystem is now"
+  test:
+    error: "&cDon't found &e\"%s\""
+    success: "&aTest success."
+events:
+  bits: "Bits"
+  channel-points: "Channel points"
+  hype-train: "Hype Train"
+  sub: "Subscription"
+  sub-gift: "Subscription gift"
+rewards:
+  freeze: "&bFreeze &e%ss"
+  gamemode: "&fGamemode &e%ss"

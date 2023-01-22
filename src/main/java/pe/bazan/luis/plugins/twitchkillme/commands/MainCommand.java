@@ -31,18 +31,21 @@ public class MainCommand implements CommandExecutor, TabCompleter {
       if(sender.hasPermission("tkm.commands.reload")){
         plugin.reload();
         sender.sendMessage(MessageFormat.formatMC(
-                "&aRewards loaded: &e"
-                        + plugin.getRewardsConfig().getRewards().size()
+                plugin.getMsg("commands.reload.title")
+                + plugin.getRewardsConfig().getRewards().size()
         ));
         plugin.getRewardsConfig().getRewards().forEach((k, v) -> {
           sender.sendMessage(MessageFormat.formatMC(String.format(
-                  "&eID: &f%s &e- Name: &f%s &e- Preset: &f%s",
+                  plugin.getMsg("commands.reload.format"),
                   k,
                   v.getName(),
                   v.getPreset()
           )));
         });
-        sender.sendMessage(MessageFormat.formatMC("&aConfig reload!"));
+        sender.sendMessage(MessageFormat.formatMC(
+                plugin.getMsg("all.prefix")
+                + plugin.getMsg("commands.reload.confirmation")
+        ));
       }
       return true;
     }
@@ -50,7 +53,12 @@ public class MainCommand implements CommandExecutor, TabCompleter {
     if(args.length == 1 && args[0].equalsIgnoreCase("toggle")){
       if(!sender.hasPermission("tkm.commands.toggle")) return true;
       plugin.setEnable(!plugin.isEnable());
-      sender.sendMessage(MessageFormat.formatMC("&aTwitch kill me system is now " + (plugin.isEnable() ? "&aEnable" : "&cDisable")));
+      sender.sendMessage(MessageFormat.formatMC(
+              plugin.getMsg("all.prefix")
+              + plugin.getMsg("commands.toggle")
+              + " "
+              + (plugin.isEnable() ? plugin.getMsg("all.enable") : plugin.getMsg("all.disable"))
+      ));
       return true;
     }
 
@@ -62,10 +70,11 @@ public class MainCommand implements CommandExecutor, TabCompleter {
       if(!sender.hasPermission("tkm.commands.test")) return true;
       Reward reward = plugin.getRewardsConfig().getRewards().get(args[1]);
       if(reward == null) {
-        sender.sendMessage(MessageFormat.formatMC(String.format("&cDon't found &e\"%s\"", args[1])));
+        sender.sendMessage(MessageFormat.formatMC(String.format(plugin.getMsg("commands.test.error"), args[1])));
         return false;
       }
       reward.runReward("dummy", "12", "command", plugin.getMainConfigManager().getChannelsId().get(0), (Player) sender);
+      sender.sendMessage(plugin.getMsg("commands.test.success"));
       return true;
     }
 

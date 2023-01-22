@@ -3,11 +3,13 @@ package pe.bazan.luis.plugins.twitchkillme;
 import org.bukkit.plugin.java.JavaPlugin;
 import pe.bazan.luis.plugins.twitchkillme.commands.MainCommand;
 import pe.bazan.luis.plugins.twitchkillme.configs.MainConfigManager;
+import pe.bazan.luis.plugins.twitchkillme.configs.MessagesConfig;
 import pe.bazan.luis.plugins.twitchkillme.configs.NotificationsConfig;
 import pe.bazan.luis.plugins.twitchkillme.configs.RewardsConfig;
 
 public final class TwitchKillMe extends JavaPlugin {
   private MainConfigManager mainConfigManager;
+  private MessagesConfig messagesConfig;
   private RewardsConfig rewardsConfig;
   private NotificationsConfig notificationsConfig;
   private static TwitchKillMe instance;
@@ -59,6 +61,7 @@ public final class TwitchKillMe extends JavaPlugin {
     this.mainConfigManager.reloadConfig();
     this.notificationsConfig.reloadConfig();
     this.rewardsConfig.reloadConfig();
+    this.messagesConfig.registerConfig();
   }
 
   public boolean isEnable() {
@@ -68,5 +71,13 @@ public final class TwitchKillMe extends JavaPlugin {
   public void setEnable(boolean enable) {
     this.enable = enable;
     mainConfigManager.setEnable(enable);
+  }
+
+  public MessagesConfig getMessagesConfig() {
+    return messagesConfig;
+  }
+
+  public String getMsg(String path) {
+    return messagesConfig.get(path);
   }
 }

@@ -65,7 +65,7 @@ public class FreezeReward {
     @Override
     public void run() {
       player.sendActionBar(MessageFormat.formatMC(String.format(
-              "&bFreeze &e%ss",
+              TwitchKillMe.getInstance().getMsg("rewards.freeze"),
               decimalFormat.format(time)
       )));
       if(time <= 0) {
@@ -88,7 +88,7 @@ public class FreezeReward {
       this.player = player;
       this.time = time;
       this.bossBar = Bukkit.createBossBar(
-              MessageFormat.formatMCTxt(String.format("&bFreeze &e%ss", decimalFormat.format(time))),
+              MessageFormat.formatMCTxt(String.format(TwitchKillMe.getInstance().getMsg("rewards.freeze"), decimalFormat.format(time))),
               BarColor.WHITE,
               BarStyle.SOLID
       );
@@ -100,7 +100,7 @@ public class FreezeReward {
     public void run() {
       bossBar.setProgress((double) time / totalTime);
       System.out.println(bossBar.getProgress());
-      bossBar.setTitle(MessageFormat.formatMCTxt(String.format("&bFreeze &e%ss", decimalFormat.format(time))));
+      bossBar.setTitle(MessageFormat.formatMCTxt(String.format(TwitchKillMe.getInstance().getMsg("rewards.freeze"), decimalFormat.format(time))));
       if(time <= 0) {
         bossBar.removeAll();
         cancel();

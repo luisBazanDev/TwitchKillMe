@@ -65,7 +65,7 @@ public class GamemodeRewards {
     @Override
     public void run() {
       player.sendActionBar(MessageFormat.formatMC(String.format(
-              "&fGamemode &e%ss",
+              TwitchKillMe.getInstance().getMsg("rewards.gamemode"),
               decimalFormat.format(time)
       )));
       if(time <= 0) {
@@ -88,7 +88,7 @@ public class GamemodeRewards {
       this.player = player;
       this.time = time;
       this.bossBar = Bukkit.createBossBar(
-              MessageFormat.formatMCTxt(String.format("&fGamemode &e%ss", decimalFormat.format(time))),
+              MessageFormat.formatMCTxt(String.format(TwitchKillMe.getInstance().getMsg("rewards.gamemode"), decimalFormat.format(time))),
               BarColor.WHITE,
               BarStyle.SOLID
       );
@@ -100,7 +100,7 @@ public class GamemodeRewards {
     public void run() {
       bossBar.setProgress((double) time / totalTime);
       System.out.println(bossBar.getProgress());
-      bossBar.setTitle(MessageFormat.formatMCTxt(String.format("&fGamemode &e%ss", decimalFormat.format(time))));
+      bossBar.setTitle(MessageFormat.formatMCTxt(String.format(TwitchKillMe.getInstance().getMsg("rewards.gamemode"), decimalFormat.format(time))));
       if(time <= 0) {
         bossBar.removeAll();
         cancel();
