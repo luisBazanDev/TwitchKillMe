@@ -17,6 +17,10 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - `tkm.commands.toggle` - Toggle rewards
 - `tkm.commands.test` - Test reward
 
+## Languages
+- [ES](./languages/es.yml)
+- [EN](./languages/en.yml)
+
 ## [Spigot page](https://www.spigotmc.org/resources/twitchkillme.107399/)
 
 ## License [MIT](./LICENSE)
