@@ -74,7 +74,10 @@ public class MainCommand implements CommandExecutor, TabCompleter {
         return false;
       }
       reward.runReward("dummy", "12", "command", plugin.getMainConfigManager().getChannelsId().get(0), (Player) sender);
-      sender.sendMessage(plugin.getMsg("commands.test.success"));
+      sender.sendMessage(MessageFormat.formatMC(
+              plugin.getMsg("all.prefix")
+              + plugin.getMsg("commands.test.success")
+      ));
       return true;
     }
 

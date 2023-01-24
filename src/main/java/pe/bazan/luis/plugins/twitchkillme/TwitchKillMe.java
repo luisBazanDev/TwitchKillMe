@@ -20,6 +20,7 @@ public final class TwitchKillMe extends JavaPlugin {
   public void onEnable() {
     // Plugin startup logic
     instance = this;
+    this.messagesConfig = new MessagesConfig(this);
     this.mainConfigManager = new MainConfigManager(this);
     this.notificationsConfig = new NotificationsConfig(this);
     this.rewardsConfig = new RewardsConfig(this);
@@ -58,10 +59,10 @@ public final class TwitchKillMe extends JavaPlugin {
   }
 
   public void reload() {
+    this.messagesConfig.registerConfig();
     this.mainConfigManager.reloadConfig();
     this.notificationsConfig.reloadConfig();
     this.rewardsConfig.reloadConfig();
-    this.messagesConfig.registerConfig();
   }
 
   public boolean isEnable() {
