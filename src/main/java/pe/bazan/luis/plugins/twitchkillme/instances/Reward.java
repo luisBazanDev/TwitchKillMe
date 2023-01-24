@@ -73,6 +73,9 @@ public class Reward {
         case "tp":
           TpReward.run(settings, p, this, rewardFormat);
           break;
+        case "place":
+          PlaceReward.run(settings, p, this, rewardFormat);
+          break;
       }
     });
   }

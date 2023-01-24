@@ -53,7 +53,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [X] Void a chunk
   - [X] Freeze Player
   - [X] Tp
-  - [ ] Place
+  - [X] Place
   - [ ] Run player command
   - [ ] Tp to world
   - [ ] Skin

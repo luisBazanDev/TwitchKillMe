@@ -120,3 +120,20 @@ rewards:
       z:
         min: 0
         max: 0
+  9:
+    preset: "place"
+    name: "Slow Death"
+    notification: default
+    active:
+      points: 40
+    settings:
+      blocks:
+        0:
+          material: COBWEB
+          cords: [0, 0, 0]
+        1:
+          material: LAVA
+          cords: [0, -1, 0]
+        2:
+          material: LAVA
+          cords: [0, -2, 0]
