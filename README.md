@@ -54,12 +54,12 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [X] Freeze Player
   - [X] Tp
   - [X] Place
+  - [X] Clear inventory
   - [ ] Run player command
   - [ ] Tp to world
   - [ ] Skin
   - [ ] Random preset
   - [ ] Randomizer inventory
-  - [ ] Clear inventory
   - [ ] Structure, datapack or schematic
   - [ ] Potion effect
   - [ ] Particles

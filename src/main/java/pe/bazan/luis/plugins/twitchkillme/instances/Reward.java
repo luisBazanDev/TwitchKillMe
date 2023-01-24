@@ -76,6 +76,9 @@ public class Reward {
         case "place":
           PlaceReward.run(settings, p, this, rewardFormat);
           break;
+        case "clear-inventory":
+          ClearInventoryReward.run(settings, p, this, rewardFormat);
+          break;
       }
     });
   }

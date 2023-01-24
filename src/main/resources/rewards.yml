@@ -137,3 +137,9 @@ rewards:
         2:
           material: LAVA
           cords: [0, -2, 0]
+  10:
+    preset: "clear-inventory"
+    name: "Clear Inventory"
+    notification: default
+    active:
+      points: 40
