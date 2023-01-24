@@ -80,4 +80,8 @@ public final class TwitchKillMe extends JavaPlugin {
   public String getMsg(String path) {
     return messagesConfig.get(path);
   }
+
+  public static void reportError(String e) {
+    TwitchKillMe.getInstance().getLogger().info(MessageFormat.formatMCTxt("[ERROR] "+e));
+  }
 }
