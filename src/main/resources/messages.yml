@@ -20,3 +20,4 @@ events:
 rewards:
   freeze: "&bFreeze &e%ss"
   gamemode: "&fGamemode &e%ss"
+  random: "&cError reward not found"

@@ -143,3 +143,14 @@ rewards:
     notification: default
     active:
       points: 40
+  11:
+    preset: "random-reward"
+    active:
+      points: 40
+    settings:
+      rewards:
+        - 1
+        - 2
+        - 3
+        - 5
+        - 7

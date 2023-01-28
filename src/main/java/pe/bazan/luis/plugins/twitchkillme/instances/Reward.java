@@ -20,7 +20,8 @@ public class Reward {
   public Reward(ConfigurationSection conf) {
     this.preset = conf.getString("preset");
     this.name = conf.getString("name");
-    this.notification = TwitchKillMe.getInstance().getNotificationsConfig().getNotifications().get(conf.getString("notification").toLowerCase());
+    if(conf.getString("notification") != null)
+      this.notification = TwitchKillMe.getInstance().getNotificationsConfig().getNotifications().get(conf.getString("notification").toLowerCase());
     this.points = conf.getInt("active.points");
     this.bits = conf.getInt("active.bits");
     this.sub = conf.getInt("active.sub");
@@ -78,6 +79,9 @@ public class Reward {
           break;
         case "clear-inventory":
           ClearInventoryReward.run(settings, p, this, rewardFormat);
+          break;
+        case "random-reward":
+          RandomReward.run(settings, p, this, rewardFormat);
           break;
       }
     });
