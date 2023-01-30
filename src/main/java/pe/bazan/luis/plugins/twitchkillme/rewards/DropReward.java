@@ -63,7 +63,11 @@ public class DropReward {
         break;
       default:
         itemStack = p.getInventory().getItem(Integer.parseInt(slot));
+        p.getInventory().setItem(Integer.parseInt(slot), new ItemStack(Material.AIR));
+        break;
     }
-    p.getWorld().dropItemNaturally(p.getLocation(), itemStack);
+    if(itemStack != null) {
+      p.getWorld().dropItem(p.getLocation(), itemStack);
+    }
   }
 }
