@@ -18,6 +18,6 @@ events:
   sub: "Subscription"
   sub-gift: "Subscription gift"
 rewards:
+  reward-error: "&cError reward not found"
   freeze: "&bFreeze &e%ss"
   gamemode: "&fGamemode &e%ss"
-  random: "&cError reward not found"

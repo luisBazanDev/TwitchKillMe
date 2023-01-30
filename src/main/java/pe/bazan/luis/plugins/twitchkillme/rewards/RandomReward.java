@@ -18,7 +18,7 @@ public class RandomReward {
     );
 
     if(executableReward == null) {
-      p.sendMessage(MessageFormat.formatMC(TwitchKillMe.getInstance().getMsg("rewards.random")));
+      p.sendMessage(MessageFormat.formatMC(TwitchKillMe.getInstance().getMsg("rewards.reward-error")));
       return;
     }
 
