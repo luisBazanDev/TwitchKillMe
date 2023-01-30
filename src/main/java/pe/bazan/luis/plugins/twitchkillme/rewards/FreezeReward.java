@@ -99,7 +99,6 @@ public class FreezeReward {
     @Override
     public void run() {
       bossBar.setProgress((double) time / totalTime);
-      System.out.println(bossBar.getProgress());
       bossBar.setTitle(MessageFormat.formatMCTxt(String.format(TwitchKillMe.getInstance().getMsg("rewards.freeze"), decimalFormat.format(time))));
       if(time <= 0) {
         bossBar.removeAll();
