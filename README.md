@@ -56,6 +56,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [X] Place
   - [X] Clear inventory
   - [X] Random reward
+  - [X] Multi reward
   - [ ] Run player command
   - [ ] Tp to world
   - [ ] Skin

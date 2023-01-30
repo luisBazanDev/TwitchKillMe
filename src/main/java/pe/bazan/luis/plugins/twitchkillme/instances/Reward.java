@@ -83,6 +83,9 @@ public class Reward {
         case "random-reward":
           RandomReward.run(settings, p, this, rewardFormat);
           break;
+        case "multi-reward":
+          MultiReward.run(settings, p, this, rewardFormat);
+          break;
       }
     });
   }

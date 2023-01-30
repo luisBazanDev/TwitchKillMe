@@ -154,3 +154,14 @@ rewards:
         - 3
         - 5
         - 7
+  12:
+    preset: "multi-reward"
+    name: "Multi Reward"
+    notification: default
+    active:
+      points: 40
+    settings:
+      rewards:
+        - 1
+        - 2
+        - 3
