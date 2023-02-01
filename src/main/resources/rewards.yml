@@ -173,6 +173,6 @@ rewards:
       points: 50
     settings:
       radius: 5
-      effects: # EFFECT;AMOUNT;LEVEL;DURATION_IN_TICKS - Effects list on https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
-        - SPEED;2;2;300
-        - ABSORPTION;2;1;200
+      effects: # EFFECT;AMOUNT;AMPLIFIER;DURATION_IN_TICKS - Effects list on https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+        - SPEED;2;1;300
+        - ABSORPTION;2;0;200

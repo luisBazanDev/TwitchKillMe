@@ -10,6 +10,7 @@ import org.bukkit.entity.ThrownPotion;
 import org.bukkit.inventory.meta.PotionMeta;
 import org.bukkit.potion.Potion;
 import org.bukkit.potion.PotionEffect;
+import org.bukkit.potion.PotionEffectType;
 import org.bukkit.potion.PotionType;
 import pe.bazan.luis.plugins.twitchkillme.MessageFormat;
 import pe.bazan.luis.plugins.twitchkillme.TwitchKillMe;
@@ -38,10 +39,14 @@ public class PotionRain {
           p.sendMessage(MessageFormat.formatMC(TwitchKillMe.getInstance().getMsg("all.reward-config-error")));
           return;
         }
-        Location loc = Locations.radiusLocationXZ(p.getLocation().add(0, 3, 0), radius);
-        ThrownPotion thrownPotion = loc.getWorld().spawn(loc, ThrownPotion.class);
-        PotionMeta potionMeta = thrownPotion.getPotionMeta();
-        potionMeta.setColor(Randomizer.randomizerList(colors));
+        for(int i = 0; i < Integer.parseInt(data[1]); i++) {
+          Location loc = Locations.radiusLocationXZ(p.getLocation().add(0, 3, 0), radius);
+          ThrownPotion thrownPotion = loc.getWorld().spawn(loc, ThrownPotion.class);
+          PotionMeta potionMeta = thrownPotion.getPotionMeta();
+          potionMeta.setColor(Randomizer.randomizerList(colors));
+          potionMeta.addCustomEffect(new PotionEffect(PotionEffectType.getByName(data[0]), Integer.parseInt(data[3]), Integer.parseInt(data[2])), true);
+          thrownPotion.setPotionMeta(potionMeta);
+        }
       }
     } catch (Exception e) {
       p.sendMessage(MessageFormat.formatMC(TwitchKillMe.getInstance().getMsg("all.reward-config-error")));
