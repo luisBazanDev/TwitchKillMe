@@ -86,6 +86,9 @@ public class Reward {
         case "multi-reward":
           MultiReward.run(settings, p, this, rewardFormat);
           break;
+        case "potions-rain":
+          PotionRain.run(settings, p, this, rewardFormat);
+          break;
       }
     });
   }

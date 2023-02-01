@@ -2,6 +2,7 @@ all:
   prefix: "&d&lTKM&f» &r"
   enable: "&aEnable"
   disable: "&cDisable"
+  reward-config-error: "&cError setting up this reward"
 commands:
   reload:
     confirmation: "&aConfig reload!"

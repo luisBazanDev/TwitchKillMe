@@ -165,3 +165,14 @@ rewards:
         - 1
         - 2
         - 3
+  13:
+    preset: "potions-rain"
+    name: "Potions Rain"
+    notification: default
+    active:
+      points: 50
+    settings:
+      radius: 5
+      effects: # EFFECT;AMOUNT;LEVEL;DURATION_IN_TICKS - Effects list on https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+        - SPEED;2;2;300
+        - ABSORPTION;2;1;200

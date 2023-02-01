@@ -57,6 +57,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [X] Clear inventory
   - [X] Random reward
   - [X] Multi reward
+  - [X] Potions rain
   - [ ] Run player command
   - [ ] Tp to world
   - [ ] Skin
@@ -65,4 +66,3 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [ ] Potion effect
   - [ ] Particles
   - [ ] Fireworks
-  - [ ] Potions rain
