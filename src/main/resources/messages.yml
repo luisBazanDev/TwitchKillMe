@@ -2,6 +2,7 @@ all:
   prefix: "&d&lTKM&f» &r"
   enable: "&aEnable"
   disable: "&cDisable"
+  reward-config-error: "&cError setting up this reward"
 commands:
   reload:
     confirmation: "&aConfig reload!"
@@ -18,5 +19,6 @@ events:
   sub: "Subscription"
   sub-gift: "Subscription gift"
 rewards:
+  reward-error: "&cError reward not found"
   freeze: "&bFreeze &e%ss"
   gamemode: "&fGamemode &e%ss"

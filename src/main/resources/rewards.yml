@@ -8,6 +8,11 @@
 # void-chunk
 # freeze
 # tp
+# place
+# clear-inventory
+# random-reward
+# multi-reward
+# potions-rain
 rewards:
   0:
     preset: "summon"
@@ -120,3 +125,59 @@ rewards:
       z:
         min: 0
         max: 0
+  9:
+    preset: "place"
+    name: "Slow Death"
+    notification: default
+    active:
+      points: 40
+    settings:
+      blocks:
+        0:
+          material: COBWEB
+          cords: [0, 0, 0]
+        1:
+          material: LAVA
+          cords: [0, -1, 0]
+        2:
+          material: LAVA
+          cords: [0, -2, 0]
+  10:
+    preset: "clear-inventory"
+    name: "Clear Inventory"
+    notification: default
+    active:
+      points: 40
+  11:
+    preset: "random-reward"
+    active:
+      points: 40
+    settings:
+      rewards:
+        - 1
+        - 2
+        - 3
+        - 5
+        - 7
+  12:
+    preset: "multi-reward"
+    name: "Multi Reward"
+    notification: default
+    active:
+      points: 40
+    settings:
+      rewards:
+        - 1
+        - 2
+        - 3
+  13:
+    preset: "potions-rain"
+    name: "Potions Rain"
+    notification: default
+    active:
+      points: 50
+    settings:
+      radius: 5
+      effects: # EFFECT;AMOUNT;AMPLIFIER;DURATION_IN_TICKS - Effects list on https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+        - SPEED;2;1;300
+        - ABSORPTION;2;0;200

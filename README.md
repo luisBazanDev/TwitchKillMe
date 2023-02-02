@@ -5,6 +5,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [config.yml](./src/main/resources/config.yml)
 - [notifications.yml](./src/main/resources/notifications.yml)
 - [rewards.yml](./src/main/resources/rewards.yml)
+- [messages.yml](./src/main/resources/messages.yml)
 
 ## Commands
 - /twitchkillme reload - Reload config.
@@ -53,15 +54,16 @@ This is a popular event among streamers on twitch. So far the best way was a mod
   - [X] Void a chunk
   - [X] Freeze Player
   - [X] Tp
-  - [ ] Place
+  - [X] Place
+  - [X] Clear inventory
+  - [X] Random reward
+  - [X] Multi reward
+  - [X] Potions rain
   - [ ] Run player command
   - [ ] Tp to world
   - [ ] Skin
-  - [ ] Random preset
   - [ ] Randomizer inventory
-  - [ ] Clear inventory
   - [ ] Structure, datapack or schematic
   - [ ] Potion effect
   - [ ] Particles
   - [ ] Fireworks
-  - [ ] Potions rain
