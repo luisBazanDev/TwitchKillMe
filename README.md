@@ -5,6 +5,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [config.yml](./src/main/resources/config.yml)
 - [notifications.yml](./src/main/resources/notifications.yml)
 - [rewards.yml](./src/main/resources/rewards.yml)
+- [messages.yml](./src/main/resources/messages.yml)
 
 ## Commands
 - /twitchkillme reload - Reload config.

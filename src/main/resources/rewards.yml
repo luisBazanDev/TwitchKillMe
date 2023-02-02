@@ -8,6 +8,11 @@
 # void-chunk
 # freeze
 # tp
+# place
+# clear-inventory
+# random-reward
+# multi-reward
+# potions-rain
 rewards:
   0:
     preset: "summon"
