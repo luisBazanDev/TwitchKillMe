@@ -3,6 +3,7 @@ all:
   prefix: "&d&lTKM&f» &r"
   enable: "&aActivado"
   disable: "&cDesactivada"
+  reward-config-error: "&cError en la configuración de esta recompensa"
 commands:
   reload:
     confirmation: "&aConfiguración recargada!"
@@ -19,5 +20,6 @@ events:
   sub: "Suscripción"
   sub-gift: "Suscripción regalada"
 rewards:
+  reward-error: "&cError recompensa no encontrada"
   freeze: "&bCongelado &e%ss"
   gamemode: "&fModo de juego &e%ss"
