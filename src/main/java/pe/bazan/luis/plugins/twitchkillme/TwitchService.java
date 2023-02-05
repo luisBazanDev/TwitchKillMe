@@ -4,7 +4,18 @@ import com.github.philippheuer.credentialmanager.domain.OAuth2Credential;
 import com.github.twitch4j.TwitchClient;
 import com.github.twitch4j.TwitchClientBuilder;
 import com.github.twitch4j.pubsub.events.*;
+import com.google.gson.JsonParser;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpUriRequest;
+import org.apache.http.client.methods.RequestBuilder;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.util.EntityUtils;
+import org.json.simple.JSONObject;
 import pe.bazan.luis.plugins.twitchkillme.events.*;
+
+import java.io.IOException;
+import java.net.*;
 
 public class TwitchService {
   private TwitchKillMe twitchKillMe;
@@ -57,5 +68,27 @@ public class TwitchService {
 
   public void sendMessage(String channelId, String msg) {
     client.getChat().sendMessage(channelId, msg);
+  }
+
+  public void refreshToken() {
+    CloseableHttpClient httpclient = HttpClients.createDefault();
+    try {
+      HttpUriRequest request = RequestBuilder.post()
+              .setUri(new URI("https://id.twitch.tv/oauth2/token"))
+              .addHeader("Content-Type", "application/x-www-form-urlencoded")
+              .addParameter("client_id", TwitchKillMe.getInstance().getMainConfigManager().getClientId())
+              .addParameter("client_secret", TwitchKillMe.getInstance().getMainConfigManager().getClientSecret())
+              .addParameter("grant_type", "refresh_token")
+              .addParameter("refresh_token", TwitchKillMe.getInstance().getMainConfigManager().getRefreshToken())
+              .build();
+      CloseableHttpResponse response = httpclient.execute(request);
+      try {
+        String data = EntityUtils.toString(response.getEntity());
+      } finally {
+        response.close();
+      }
+    } catch (URISyntaxException | IOException e) {
+      TwitchKillMe.reportError("Refresh Token exception");
+    }
   }
 }

@@ -2,6 +2,10 @@ enable: false
 
 twitch:
   token: "YOUR TOKEN"
+  refresh:
+    refresh_token: "YOUR REFRESH TOKEN"
+    client_id: "YOUR CLIENT ID"
+    client_secret: "YOUR CLIENT SECRET"
   chat-token: "" # "" use token default
   channels:
     - luisbazan/111111111

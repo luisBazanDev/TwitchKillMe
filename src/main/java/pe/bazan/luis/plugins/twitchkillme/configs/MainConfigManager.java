@@ -77,4 +77,16 @@ public class MainConfigManager {
   public void setEnable(boolean enable) {
     configFile.getConfig().set("enable", enable);
   }
+
+  public String getClientId() {
+    return configFile.getConfig().getString("twitch.refresh.client_id");
+  }
+
+  public String getClientSecret() {
+    return configFile.getConfig().getString("twitch.refresh.client_secret");
+  }
+
+  public String getRefreshToken() {
+    return configFile.getConfig().getString("twitch.refresh.refresh_token");
+  }
 }
