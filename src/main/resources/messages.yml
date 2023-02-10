@@ -5,6 +5,7 @@ all:
   reward-config-error: "&cError setting up this reward"
 commands:
   reload:
+    preview: "&eReloading..."
     confirmation: "&aConfig reload!"
     title: "&aRewards loaded: &e"
     format: "&eID: &f%s &e- Name: &f%s &e- Preset: &f%s"
