@@ -115,3 +115,4 @@ run/
 # Wiki dirs
 .vscode
 node_modules
+dist
