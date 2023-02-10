@@ -1,0 +1,47 @@
+---
+import HeadCommon from "../components/HeadCommon.astro";
+import Header from "../components/Header.jsx";
+import HeadCEO from "../components/HeadCEO.astro";
+import type { MarkdownHeading } from "astro";
+
+type Props = {
+  frontmatter: CONFIG.Frontmatter;
+  headings: MarkdownHeading[];
+};
+
+import * as CONFIG from "../config";
+const { frontmatter, headings } = Astro.props as Props;
+const currentPage = Astro.url.pathname;
+frontmatter.currentPathMenu = currentPage.split("/").slice(2);
+const currentFile = `src/pages${currentPage.replace(/\/$/, "")}.md`;
+const lang = CONFIG.MENU_LANGS[frontmatter.lang ?? "en-us"];
+---
+
+<html
+  dir={frontmatter.dir ?? "ltr"}
+  lang={frontmatter.lang ?? "en-us"}
+  class="initial"
+>
+  <head>
+    <HeadCommon />
+    <HeadCEO frontmatter={frontmatter} />
+    <title>
+      {
+        frontmatter.title
+          ? `${frontmatter.title} - ${CONFIG.SITE.title}`
+          : CONFIG.SITE.title
+      }
+    </title>
+  </head>
+  <body>
+    <Header
+      currentPathMenu={frontmatter.currentPathMenu}
+      title={frontmatter.title}
+      lang={lang}
+      client:load
+    />
+    <main class="layout">
+      <slot />
+    </main>
+  </body>
+</html>
