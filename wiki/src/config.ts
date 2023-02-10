@@ -17,6 +17,7 @@ export type Frontmatter = {
 
 export const MENU_LANGS = {
   "en-us": {
+    name: "en-us",
     menu: {
       getting_started: {
         name: "Getting Started",
