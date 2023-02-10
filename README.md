@@ -1,6 +1,8 @@
 # Twitch Kill Me
 This is a popular event among streamers on twitch. So far the best way was a mod, mod is good but limited in some aspects and this plugin is here to cover these gaps.
 
+## [Docs](https://luisbazandev.github.io/TwitchKillMe)
+
 ## Default config files
 - [config.yml](./src/main/resources/config.yml)
 - [notifications.yml](./src/main/resources/notifications.yml)

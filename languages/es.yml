@@ -6,6 +6,7 @@ all:
   reward-config-error: "&cError en la configuración de esta recompensa"
 commands:
   reload:
+    preview: "&eRecargando..."
     confirmation: "&aConfiguración recargada!"
     title: "&aRecompensas cargadas: &e"
     format: "&eID: &f%s &e- Nombre: &f%s &e- Preset: &f%s"
