@@ -40,7 +40,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] Enable and disable system
 - [X] Test command
 - [X] Multi-languages support
-- [ ] Refresh token
+- [X] Refresh token
 - [ ] Save rewards on system disable, and save on cache file
 - [ ] Wiki
 - [ ] User community Points Support

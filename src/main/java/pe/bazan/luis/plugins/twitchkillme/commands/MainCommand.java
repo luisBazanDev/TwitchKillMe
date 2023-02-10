@@ -28,25 +28,29 @@ public class MainCommand implements CommandExecutor, TabCompleter {
   @Override
   public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
     if(args.length == 1 && args[0].equalsIgnoreCase("reload")){
-      if(sender.hasPermission("tkm.commands.reload")){
-        plugin.reload();
-        sender.sendMessage(MessageFormat.formatMC(
-                plugin.getMsg("commands.reload.title")
-                + plugin.getRewardsConfig().getRewards().size()
-        ));
-        plugin.getRewardsConfig().getRewards().forEach((k, v) -> {
-          sender.sendMessage(MessageFormat.formatMC(String.format(
-                  plugin.getMsg("commands.reload.format"),
-                  k,
-                  v.getName(),
-                  v.getPreset()
-          )));
-        });
-        sender.sendMessage(MessageFormat.formatMC(
-                plugin.getMsg("all.prefix")
-                + plugin.getMsg("commands.reload.confirmation")
-        ));
-      }
+      if(!sender.hasPermission("tkm.commands.reload")) return false;
+      sender.sendMessage(MessageFormat.formatMC(
+        plugin.getMsg("all.prefix")
+        + plugin.getMsg("commands.reload.preview")
+      ));
+      plugin.reload();
+      plugin.getTwitchService().reload();
+      sender.sendMessage(MessageFormat.formatMC(
+        plugin.getMsg("commands.reload.title")
+        + plugin.getRewardsConfig().getRewards().size()
+      ));
+      plugin.getRewardsConfig().getRewards().forEach((k, v) -> {
+        sender.sendMessage(MessageFormat.formatMC(String.format(
+          plugin.getMsg("commands.reload.format"),
+            k,
+            v.getName(),
+            v.getPreset()
+        )));
+      });
+      sender.sendMessage(MessageFormat.formatMC(
+        plugin.getMsg("all.prefix")
+        + plugin.getMsg("commands.reload.confirmation")
+      ));
       return true;
     }
 

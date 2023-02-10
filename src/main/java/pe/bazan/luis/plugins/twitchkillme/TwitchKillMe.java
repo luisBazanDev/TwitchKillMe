@@ -32,6 +32,7 @@ public final class TwitchKillMe extends JavaPlugin {
   @Override
   public void onDisable() {
     // Plugin shutdown logic
+    twitchService.closeConnection();
   }
 
   public void sayTwitch(String channelId, String msg) {
