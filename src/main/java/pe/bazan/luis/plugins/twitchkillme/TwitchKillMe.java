@@ -85,4 +85,8 @@ public final class TwitchKillMe extends JavaPlugin {
   public static void reportError(String e) {
     TwitchKillMe.getInstance().getLogger().info(MessageFormat.formatMCTxt("[ERROR] "+e));
   }
+
+  public static void reportMessage(String s) {
+    TwitchKillMe.getInstance().getLogger().info(MessageFormat.formatMCTxt(s));
+  }
 }
