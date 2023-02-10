@@ -76,6 +76,12 @@ public class MainConfigManager {
 
   public void setEnable(boolean enable) {
     configFile.getConfig().set("enable", enable);
+    configFile.saveConfig();
+  }
+
+  public void setToken(String token) {
+    configFile.getConfig().set("twitch.token", token);
+    configFile.saveConfig();
   }
 
   public String getClientId() {
