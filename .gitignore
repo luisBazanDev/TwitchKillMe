@@ -111,3 +111,7 @@ buildNumber.properties
 
 # Common working directory
 run/
+
+# Wiki dirs
+.vscode
+node_modules
