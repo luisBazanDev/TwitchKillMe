@@ -3,6 +3,7 @@ import HeadCommon from "../components/HeadCommon.astro";
 import Header from "../components/Header.jsx";
 import HeadCEO from "../components/HeadCEO.astro";
 import type { MarkdownHeading } from "astro";
+import "../styles/markdown.css";
 
 type Props = {
   frontmatter: CONFIG.Frontmatter;
@@ -33,14 +34,14 @@ const lang = CONFIG.MENU_LANGS[frontmatter.lang ?? "en-us"];
       }
     </title>
   </head>
-  <body>
+  <body class="font-ubuntu">
     <Header
       currentPathMenu={frontmatter.currentPathMenu}
       title={frontmatter.title}
       lang={lang}
       client:load
     />
-    <main class="bg-tkm_black text-tkm_white min-h-screen">
+    <main class="bg-tkm_black text-tkm_white min-h-screen p-3 markdown">
       <slot />
     </main>
   </body>

@@ -17,6 +17,15 @@ function Header({ title, lang, currentPathMenu }) {
           drop={currentPathMenu.includes("getting-started")}
         >
           <MenuElement
+            active={
+              currentPathMenu.includes("getting-started") &&
+              currentPathMenu.length == 1
+            }
+            link={`/${lang.name}/getting-started`}
+          >
+            /
+          </MenuElement>
+          <MenuElement
             active={currentPathMenu.includes("instalation")}
             link={`/${lang.name}/getting-started/instalation`}
           >

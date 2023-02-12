@@ -12,9 +12,12 @@ function MenuSection(props) {
   }
 
   return (
-    <div className="my-1">
-      <div className="font-bold text-lg" onClick={toggleDrop}>
-        {props.title}
+    <div>
+      <div className="flex items-center">
+        <span className="font-bold">#</span>
+        <div className="ml-1.5 text-lg" onClick={toggleDrop}>
+          {props.title}
+        </div>
       </div>
       <Content />
     </div>
