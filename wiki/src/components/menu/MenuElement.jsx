@@ -2,7 +2,10 @@ import React from "react";
 
 function MenuElement({ children, active, link }) {
   return (
-    <a className="flex" href={link}>
+    <a
+      className="flex hover:text-tkm_purple cursor-pointer select-none"
+      href={link}
+    >
       <div
         className={`h-auto ${
           active ? "bg-tkm_purple w-1" : "bg-tkm_purple_dark w-0.5"

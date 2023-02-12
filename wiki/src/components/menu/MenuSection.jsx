@@ -13,11 +13,12 @@ function MenuSection(props) {
 
   return (
     <div>
-      <div className="flex items-center">
+      <div
+        className="flex items-center cursor-pointer transition-colors select-none hover:text-tkm_purple"
+        onClick={toggleDrop}
+      >
         <span className="font-bold">#</span>
-        <div className="ml-1.5 text-lg" onClick={toggleDrop}>
-          {props.title}
-        </div>
+        <div className="ml-1.5 text-lg">{props.title}</div>
       </div>
       <Content />
     </div>

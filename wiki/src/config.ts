@@ -25,6 +25,10 @@ export const MENU_LANGS = {
         tokens: "Twitch tokens",
         config: "Configuration",
       },
+      presets: {
+        name: "Presets",
+        summon: "Summon",
+      },
     },
   },
 };

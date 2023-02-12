@@ -1,6 +1,7 @@
 ---
 import HeadCommon from "../components/HeadCommon.astro";
 import Header from "../components/Header.jsx";
+import Menu from "../components/menu/Menu.jsx";
 import HeadCEO from "../components/HeadCEO.astro";
 import type { MarkdownHeading } from "astro";
 import "../styles/markdown.css";
@@ -41,8 +42,29 @@ const lang = CONFIG.MENU_LANGS[frontmatter.lang ?? "en-us"];
       lang={lang}
       client:load
     />
-    <main class="bg-tkm_black text-tkm_white min-h-screen p-3 markdown">
-      <slot />
-    </main>
+    <div class="flex flex-col w-full lg:flex-row min-h-screen bg-tkm_black">
+      <div
+        class="hidden lg:block w-1/6 bg-tkm_gray_dark border-r border-tkm_purple_dark"
+      >
+        <Menu
+          currentPathMenu={frontmatter.currentPathMenu}
+          active={true}
+          lang={lang}
+          client:load
+        />
+      </div>
+      <main class="bg-tkm_black text-tkm_white p-3 markdown lg:w-4/6">
+        <slot />
+      </main>
+      <div class="hidden lg:flex flex-col bg-tkm_gray_dark lg:w-1/6">
+        <div class="text-tkm_white text-center w-full font-bold">
+          Help panel
+        </div>
+
+        <div class="w-full text-center mt-10 text-tkm_white">
+          🔨 Developing...
+        </div>
+      </div>
+    </div>
   </body>
 </html>

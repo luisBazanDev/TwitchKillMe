@@ -1,68 +1,21 @@
 import { useState } from "react";
-import MenuSection from "./menu/MenuSection";
-import MenuElement from "./menu/MenuElement";
+import Menu from "./menu/Menu";
 
 function Header({ title, lang, currentPathMenu }) {
-  const [hideMenu, setHideMenu] = useState(false);
+  const [hideMenu, setHideMenu] = useState(true);
   const togleMenu = () => {
     setHideMenu(!hideMenu);
   };
 
-  function Menu() {
-    if (hideMenu) return null;
-    return (
-      <div className="flex flex-col w-full bg-tkm_gray_dark text-tkm_white mt-3 pl-2">
-        <MenuSection
-          title={lang.menu.getting_started.name}
-          drop={currentPathMenu.includes("getting-started")}
-        >
-          <MenuElement
-            active={
-              currentPathMenu.includes("getting-started") &&
-              currentPathMenu.length == 1
-            }
-            link={`/${lang.name}/getting-started`}
-          >
-            /
-          </MenuElement>
-          <MenuElement
-            active={currentPathMenu.includes("instalation")}
-            link={`/${lang.name}/getting-started/instalation`}
-          >
-            {lang.menu.getting_started.instalation}
-          </MenuElement>
-          <MenuElement
-            active={currentPathMenu.includes("twitch-tokens")}
-            link={`/${lang.name}/getting-started/twitch-tokens`}
-          >
-            {lang.menu.getting_started.tokens}
-          </MenuElement>
-          <MenuElement
-            active={currentPathMenu.includes("started-configuration")}
-            link={`/${lang.name}/getting-started/started-configuration`}
-          >
-            {lang.menu.getting_started.config}
-          </MenuElement>
-        </MenuSection>
-        <MenuSection title="Presets">
-          <MenuElement>Summon</MenuElement>
-        </MenuSection>
-        <MenuSection title="Rewards collection">
-          <MenuElement>Zombies reward</MenuElement>
-        </MenuSection>
-      </div>
-    );
-  }
-
   return (
     <div className="flex items-center justify-between flex-wrap w-full bg-tkm_purple text-tkm_white p-3">
       <div className="flex items-center w-4/5">
-        <div className="w-1/4">
+        <div className="w-1/4 md:w-1/6 lg:w-1/12">
           <img src="/icon.png" alt="icon.png" />
         </div>
-        <h1 className="ml-3 font-bold text-lg">Documentation</h1>
+        <h1 className="ml-3 font-bold text-lg md:text-xl">Documentation</h1>
       </div>
-      <button type="button" onClick={togleMenu} className="font-bold">
+      <button type="button" onClick={togleMenu} className="font-bold lg:hidden">
         <svg
           width="24"
           height="24"
@@ -84,7 +37,13 @@ function Header({ title, lang, currentPathMenu }) {
           />
         </svg>
       </button>
-      <Menu />
+      <div className="lg:hidden w-full">
+        <Menu
+          lang={lang}
+          currentPathMenu={currentPathMenu}
+          active={!hideMenu}
+        />
+      </div>
     </div>
   );
 }
