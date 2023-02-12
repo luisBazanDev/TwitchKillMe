@@ -35,3 +35,7 @@
 .markdown a {
   @apply text-tkm_purple_light font-bold underline;
 }
+
+.markdown pre {
+  @apply p-2 rounded-md bg-tkm_white;
+}
