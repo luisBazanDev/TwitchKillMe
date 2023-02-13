@@ -32,6 +32,8 @@ da
 1. asd
 2. asda
 
+---
+
 `/command arg1 arg2` - command **bold**
 
 `/command arg1 arg2` - command _cursiva_

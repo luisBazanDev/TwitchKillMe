@@ -12,6 +12,10 @@
   @apply font-bold text-base mb-1;
 }
 
+.markdown hr {
+  @apply my-4;
+}
+
 .markdown ul {
   @apply ml-2 list-disc;
 }
