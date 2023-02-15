@@ -1,0 +1,80 @@
+---
+import "../styles/footer.css";
+const lang = Astro.props.lang;
+---
+
+<div class="footer py-5">
+  <div>
+    <div class="font-bold">{lang.footer.config_files}</div>
+    <ul class="">
+      <li>
+        <a
+          href="https://github.com/luisBazanDev/TwitchKillMe/blob/main/src/main/resources/config.yml"
+          target="_blank">config.yml</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/luisBazanDev/TwitchKillMe/blob/main/src/main/resources/messages.yml"
+          target="_blank">messages.yml</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/luisBazanDev/TwitchKillMe/blob/main/src/main/resources/notifications.yml"
+          target="_blank">notifications.yml</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/luisBazanDev/TwitchKillMe/blob/main/src/main/resources/rewards.yml"
+          target="_blank">rewards.yml</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div>
+    <div class="font-bold">{lang.footer.languages}</div>
+    <ul>
+      <li>
+        <a
+          href="https://github.com/luisBazanDev/TwitchKillMe/blob/main/languages/en.yml"
+          target="_blank">{lang.footer.langs[0]}</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/luisBazanDev/TwitchKillMe/blob/main/languages/es.yml"
+          target="_blank">{lang.footer.langs[1]}</a
+        >
+      </li>
+    </ul>
+  </div>
+  <div>
+    <div class="font-bold">{lang.footer.other_links}</div>
+    <ul>
+      <li>
+        <a
+          href="https://www.spigotmc.org/resources/twitchkillme.107399/"
+          target="_blank">{lang.footer.others[0]}</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/luisBazanDev/TwitchKillMe/blob/main/LICENSE"
+          target="_blank">{lang.footer.others[1]}</a
+        >
+      </li>
+      <li>
+        <a href="/">{lang.footer.others[2]}</a>
+      </li>
+    </ul>
+  </div>
+  <p class="col-span-3 flex justify-center py-5">
+    By <a
+      href="https://luis.bazan.pe"
+      target="_blank"
+      class="ml-1 text-tkm_purple_light font-bold">Luis Bazán</a
+    >
+  </p>
+</div>

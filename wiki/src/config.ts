@@ -30,5 +30,12 @@ export const MENU_LANGS = {
         summon: "Summon",
       },
     },
+    footer: {
+      config_files: "Config files",
+      languages: "Languages",
+      langs: ["English", "Spanish"],
+      other_links: "Other links",
+      others: ["Spigot Page", "License (MIT)", "Docs"],
+    },
   },
 };
