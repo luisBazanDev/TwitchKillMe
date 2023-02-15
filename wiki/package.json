@@ -1,0 +1,37 @@
+{
+  "name": "tkm-wiki",
+  "version": "1.0.0",
+  "description": "Wiki for TwitchKillMe plugin",
+  "main": "index.js",
+  "scripts": {
+    "dev": "astro dev --host",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisBazanDev/TwitchKillMe.git"
+  },
+  "keywords": [
+    "twitch",
+    "wiki",
+    "chat-vs-streamer"
+  ],
+  "author": "Luis Bazán",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luisBazanDev/TwitchKillMe/issues"
+  },
+  "homepage": "https://github.com/luisBazanDev/TwitchKillMe#readme",
+  "dependencies": {
+    "@astrojs/react": "^2.0.2",
+    "@astrojs/tailwind": "^3.0.1",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "astro": "^2.0.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "^3.2.6"
+  }
+}

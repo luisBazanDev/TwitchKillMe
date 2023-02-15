@@ -1,0 +1,74 @@
+---
+import HeadCommon from "../components/HeadCommon.astro";
+import Header from "../components/Header.jsx";
+import Menu from "../components/menu/Menu.jsx";
+import HeadCEO from "../components/HeadCEO.astro";
+import Footer from "../components/Footer.astro";
+import type { MarkdownHeading } from "astro";
+import "../styles/markdown.css";
+
+type Props = {
+  frontmatter: CONFIG.Frontmatter;
+  headings: MarkdownHeading[];
+};
+
+import * as CONFIG from "../config";
+const { frontmatter, headings } = Astro.props as Props;
+const currentPage = Astro.url.pathname;
+frontmatter.currentPathMenu = currentPage.split("/").slice(2);
+const currentFile = `src/pages${currentPage.replace(/\/$/, "")}.md`;
+const lang = CONFIG.MENU_LANGS[frontmatter.lang ?? "en-us"];
+---
+
+<html
+  dir={frontmatter.dir ?? "ltr"}
+  lang={frontmatter.lang ?? "en-us"}
+  class="initial"
+>
+  <head>
+    <HeadCommon />
+    <HeadCEO frontmatter={frontmatter} />
+    <title>
+      {
+        frontmatter.title
+          ? `${frontmatter.title} - ${CONFIG.SITE.title}`
+          : CONFIG.SITE.title
+      }
+    </title>
+  </head>
+  <body class="font-ubuntu">
+    <Header
+      currentPathMenu={frontmatter.currentPathMenu}
+      title={frontmatter.title}
+      lang={lang}
+      client:load
+    />
+    <div
+      class="flex flex-col justify-between w-full lg:flex-row min-h-screen h-auto bg-tkm_black"
+    >
+      <div
+        class="hidden lg:block w-1/6 bg-tkm_gray_dark border-r border-tkm_purple_dark"
+      >
+        <Menu
+          currentPathMenu={frontmatter.currentPathMenu}
+          active={true}
+          lang={lang}
+          client:load
+        />
+      </div>
+      <main class="bg-tkm_black text-tkm_white p-3 markdown lg:w-4/6">
+        <slot />
+      </main>
+      <div class="flex flex-col w-full bg-tkm_gray_dark h-auto lg:w-1/6">
+        <div class="text-tkm_white text-center w-full font-bold">
+          Help panel
+        </div>
+
+        <div class="w-full text-center text-tkm_white my-20">
+          🔨 Developing...
+        </div>
+      </div>
+    </div>
+    <Footer lang={lang} />
+  </body>
+</html>

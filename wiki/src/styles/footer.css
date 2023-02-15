@@ -1,0 +1,23 @@
+.footer {
+  @apply bg-tkm_black grid grid-cols-3 text-tkm_white;
+}
+
+.footer > div {
+  @apply flex flex-col items-center;
+}
+
+.footer ul {
+  @apply list-disc;
+}
+
+.footer li {
+  @apply list-inside;
+}
+
+.footer li::marker {
+  @apply text-tkm_purple_light font-bold;
+}
+
+.footer a {
+  @apply underline transition-colors hover:text-tkm_purple text-sm lg:text-base;
+}
