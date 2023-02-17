@@ -10,9 +10,12 @@ permissions:
 
 jobs:
   build:
-    environment:
-      working-directory: wiki
     runs-on: ubuntu-lastest
+    environment:
+      name: github-pages
+    defaults:
+      run:
+        working-directory: ${{ env.working-directory }}
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
@@ -26,8 +29,10 @@ jobs:
       name: github-pages
       working-directory: wiki
       url: ${{ steps.deployment.outputs.page_url }}
+    defaults:
+      run:
+        working-directory: ${{ env.working-directory }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-        working-directory: wiki
