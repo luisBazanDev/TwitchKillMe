@@ -32,6 +32,10 @@
   @apply list-inside lg:text-xl;
 }
 
+.markdown ol li {
+  @apply list-outside;
+}
+
 .markdown li::marker {
   @apply text-tkm_purple_light font-bold;
 }
@@ -46,4 +50,8 @@
 
 .markdown pre {
   @apply p-2 rounded-md bg-tkm_white;
+}
+
+.markdown em {
+  @apply text-tkm_white_dark;
 }

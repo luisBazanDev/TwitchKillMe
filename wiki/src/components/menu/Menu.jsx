@@ -20,10 +20,10 @@ function Menu({ lang, active, currentPathMenu }) {
           /
         </MenuElement>
         <MenuElement
-          active={currentPathMenu.includes("instalation")}
-          link={`/TwitchKillMe/${lang.name}/getting-started/instalation`}
+          active={currentPathMenu.includes("installation")}
+          link={`/TwitchKillMe/${lang.name}/getting-started/installation`}
         >
-          {lang.menu.getting_started.instalation}
+          {lang.menu.getting_started.installation}
         </MenuElement>
         <MenuElement
           active={currentPathMenu.includes("twitch-tokens")}

@@ -21,7 +21,7 @@ export const MENU_LANGS = {
     menu: {
       getting_started: {
         name: "Getting Started",
-        instalation: "Instalation",
+        installation: "Installation",
         tokens: "Twitch tokens",
         config: "Configuration",
       },

@@ -55,4 +55,4 @@ report it [here](https://github.com/luisBazanDev/TwitchKillMe/issues)
 
 This plugin was initially developed by Luis Bazán and is currently maintained by him, but if you want to contribute or report a bug, do so [here](https://github.com/luisBazanDev/TwitchKillMe).
 
-## ⇀ [Start with installation](/TwitchKillMe/en-us/getting-started/instalation)
+## ⇀ [Start with installation](/TwitchKillMe/en-us/getting-started/installation)
