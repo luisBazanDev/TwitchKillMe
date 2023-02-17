@@ -15,25 +15,25 @@ function Menu({ lang, active, currentPathMenu }) {
             currentPathMenu.includes("getting-started") &&
             currentPathMenu.length == 1
           }
-          link={`/${lang.name}/getting-started`}
+          link={`/TwitchKillMe/${lang.name}/getting-started`}
         >
           /
         </MenuElement>
         <MenuElement
           active={currentPathMenu.includes("instalation")}
-          link={`/${lang.name}/getting-started/instalation`}
+          link={`/TwitchKillMe/${lang.name}/getting-started/instalation`}
         >
           {lang.menu.getting_started.instalation}
         </MenuElement>
         <MenuElement
           active={currentPathMenu.includes("twitch-tokens")}
-          link={`/${lang.name}/getting-started/twitch-tokens`}
+          link={`/TwitchKillMe/${lang.name}/getting-started/twitch-tokens`}
         >
           {lang.menu.getting_started.tokens}
         </MenuElement>
         <MenuElement
           active={currentPathMenu.includes("started-configuration")}
-          link={`/${lang.name}/getting-started/started-configuration`}
+          link={`/TwitchKillMe/${lang.name}/getting-started/started-configuration`}
         >
           {lang.menu.getting_started.config}
         </MenuElement>
@@ -44,7 +44,7 @@ function Menu({ lang, active, currentPathMenu }) {
       >
         <MenuElement
           active={currentPathMenu.includes("started-configuration")}
-          link={`/${lang.name}/presets/summon`}
+          link={`/TwitchKillMe/${lang.name}/presets/summon`}
         >
           {lang.menu.presets.summon}
         </MenuElement>
