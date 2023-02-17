@@ -10,20 +10,21 @@ permissions:
 
 jobs:
   build:
+    environment:
+      working-directory: wiki
     runs-on: ubuntu-lastest
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
-        working-directory: wiki
       - name: Install, build, and upload your site
         uses: withastro/action@v0
-        working-directory: wiki
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
+      working-directory: wiki
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
