@@ -11,7 +11,7 @@ function Header({ title, lang, currentPathMenu }) {
     <div className="flex items-center justify-between flex-wrap w-full bg-tkm_purple text-tkm_white p-3">
       <div className="flex items-center w-4/5">
         <div className="w-1/4 md:w-1/6 lg:w-1/12">
-          <img src="/icon.png" alt="icon.png" />
+          <img src="/TwitchKillMe/icon.png" alt="icon.png" />
         </div>
         <h1 className="ml-3 font-bold text-lg md:text-xl">Documentation</h1>
       </div>
