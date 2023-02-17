@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-lastest
     environment:
       name: github-pages
+      working-directory: wiki/
     defaults:
       run:
         working-directory: ${{ env.working-directory }}
@@ -27,7 +28,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      working-directory: wiki
+      working-directory: wiki/
       url: ${{ steps.deployment.outputs.page_url }}
     defaults:
       run:
