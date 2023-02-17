@@ -55,3 +55,7 @@
 .markdown em {
   @apply text-tkm_white_dark;
 }
+
+.markdown li > code {
+  @apply bg-tkm_gray px-1 py-0.5 rounded-sm font-mono;
+}
