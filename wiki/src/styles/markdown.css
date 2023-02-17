@@ -1,31 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
+.markdown p {
+  @apply mb-5 lg:mb-10 lg:text-xl;
+}
+
 .markdown h1 {
-  @apply font-bold text-xl mb-1;
+  @apply font-bold text-xl mb-1 lg:text-4xl;
 }
 
 .markdown h2 {
-  @apply font-bold text-lg mb-1;
+  @apply font-bold text-lg mb-1 lg:text-3xl;
 }
 
 .markdown h3 {
-  @apply font-bold text-base mb-1;
+  @apply font-bold text-base mb-1 lg:text-2xl;
 }
 
 .markdown hr {
-  @apply my-4;
+  @apply my-5 lg:my-10;
 }
 
 .markdown ul {
-  @apply ml-2 list-disc;
+  @apply ml-2 mb-5 list-disc lg:mb-10;
 }
 
 .markdown ol {
-  @apply ml-2 list-decimal;
+  @apply ml-2 mb-5 list-decimal lg:mb-10;
 }
 
 .markdown li {
-  @apply list-inside;
+  @apply list-inside lg:text-xl;
 }
 
 .markdown li::marker {

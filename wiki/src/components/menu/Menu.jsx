@@ -13,7 +13,7 @@ function Menu({ lang, active, currentPathMenu }) {
         <MenuElement
           active={
             currentPathMenu.includes("getting-started") &&
-            currentPathMenu.length == 1
+            currentPathMenu.length == 2
           }
           link={`/TwitchKillMe/${lang.name}/getting-started`}
         >
