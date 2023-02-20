@@ -43,10 +43,30 @@ function Menu({ lang, active, currentPathMenu }) {
         drop={currentPathMenu.includes("presets")}
       >
         <MenuElement
-          active={currentPathMenu.includes("started-configuration")}
+          active={
+            currentPathMenu.includes("presets") && currentPathMenu.length == 2
+          }
+          link={`/TwitchKillMe/${lang.name}/presets`}
+        >
+          /
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("summon")}
           link={`/TwitchKillMe/${lang.name}/presets/summon`}
         >
           {lang.menu.presets.summon}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("give")}
+          link={`/TwitchKillMe/${lang.name}/presets/give`}
+        >
+          {lang.menu.presets.give}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("armor")}
+          link={`/TwitchKillMe/${lang.name}/presets/armor`}
+        >
+          {lang.menu.presets.armor}
         </MenuElement>
       </MenuSection>
       <MenuSection title="Rewards collection">

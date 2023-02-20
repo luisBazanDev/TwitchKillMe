@@ -28,6 +28,8 @@ export const MENU_LANGS = {
       presets: {
         name: "Presets",
         summon: "Summon",
+        give: "Give",
+        armor: "Armor",
       },
     },
     footer: {
