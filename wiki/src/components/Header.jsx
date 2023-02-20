@@ -10,9 +10,12 @@ function Header({ title, lang, currentPathMenu }) {
   return (
     <div className="flex items-center justify-between flex-wrap w-full bg-tkm_purple text-tkm_white p-3">
       <div className="flex items-center w-4/5">
-        <div className="w-1/4 md:w-1/6 lg:w-1/12">
+        <a
+          className="w-1/4 md:w-1/6 lg:w-1/12"
+          href="/TwitchKillMe/en-us/getting-started/"
+        >
           <img src="/TwitchKillMe/icon.png" alt="icon.png" />
-        </div>
+        </a>
         <h1 className="ml-3 font-bold text-lg md:text-xl">Documentation</h1>
       </div>
       <button type="button" onClick={togleMenu} className="font-bold lg:hidden">
