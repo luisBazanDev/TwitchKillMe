@@ -12,7 +12,7 @@ With this preset you can give items to players with certain characteristics.
 
 ```yaml
 settings:
-  slot: "helmet" # helmet | chestplate | leggings | boots
+  slot: "helmet"
   custom-model: 0
   material: "BLACK_STAINED_GLASS"
   name: "&f&lAstronaut helmet"
