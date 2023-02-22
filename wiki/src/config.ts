@@ -30,6 +30,12 @@ export const MENU_LANGS = {
         summon: "Summon",
         give: "Give",
         armor: "Armor",
+        drop: "Drop",
+        "console-command": "Console command",
+        gamemode: "Gamemode",
+        "void-chunk": "Void chunk",
+        freeze: "Freeze",
+        teleport: "Teleport",
       },
     },
     footer: {

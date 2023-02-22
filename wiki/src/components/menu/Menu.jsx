@@ -68,6 +68,42 @@ function Menu({ lang, active, currentPathMenu }) {
         >
           {lang.menu.presets.armor}
         </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("drop")}
+          link={`/TwitchKillMe/${lang.name}/presets/drop`}
+        >
+          {lang.menu.presets.drop}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("console-command")}
+          link={`/TwitchKillMe/${lang.name}/presets/console-command`}
+        >
+          {lang.menu.presets["console-command"]}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("gamemode")}
+          link={`/TwitchKillMe/${lang.name}/presets/gamemode`}
+        >
+          {lang.menu.presets.gamemode}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("void-chunk")}
+          link={`/TwitchKillMe/${lang.name}/presets/void-chunk`}
+        >
+          {lang.menu.presets["void-chunk"]}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("freeze")}
+          link={`/TwitchKillMe/${lang.name}/presets/freeze`}
+        >
+          {lang.menu.presets.freeze}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("teleport")}
+          link={`/TwitchKillMe/${lang.name}/presets/teleport`}
+        >
+          {lang.menu.presets.teleport}
+        </MenuElement>
       </MenuSection>
       <MenuSection title="Rewards collection">
         <MenuElement>Zombies reward</MenuElement>
