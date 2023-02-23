@@ -12,7 +12,7 @@ With this preset you can give items to players with certain characteristics.
 
 ```yaml
 settings:
-  slot: "helmet" # helmet | chestplate | leggings | boots
+  slot: "helmet"
   custom-model: 0
   material: "BLACK_STAINED_GLASS"
   name: "&f&lAstronaut helmet"
@@ -27,4 +27,8 @@ settings:
 
 ### Settings
 
-- `slot`
+- `slot` - Slot id of the player's inventory `helmet`, `chestplate`, `leggings`, `boots`
+- `custom-model` - Integer, custom model id.
+- `material` - Material ID, list of material [here](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html).
+- `name` - Display name of the item.
+- `lore` - Lore lines of the item.

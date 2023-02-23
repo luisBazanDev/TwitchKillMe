@@ -1,7 +1,7 @@
 ---
 title: Getting Started
 description: In this section we are going to see how we can start using this fantastic plugin
-layout: ../../layouts/MainLayout.astro
+layout: ../../../layouts/MainLayout.astro
 lang: en-us
 author: Luis Bazán
 ---

@@ -13,9 +13,10 @@ function Menu({ lang, active, currentPathMenu }) {
         <MenuElement
           active={
             currentPathMenu.includes("getting-started") &&
-            currentPathMenu.length == 2
+            currentPathMenu.includes("") &&
+            currentPathMenu.length == 3
           }
-          link={`/TwitchKillMe/${lang.name}/getting-started`}
+          link={`/TwitchKillMe/${lang.name}/getting-started/`}
         >
           /
         </MenuElement>
@@ -44,9 +45,11 @@ function Menu({ lang, active, currentPathMenu }) {
       >
         <MenuElement
           active={
-            currentPathMenu.includes("presets") && currentPathMenu.length == 2
+            currentPathMenu.includes("presets") &&
+            currentPathMenu.includes("") &&
+            currentPathMenu.length == 3
           }
-          link={`/TwitchKillMe/${lang.name}/presets`}
+          link={`/TwitchKillMe/${lang.name}/presets/`}
         >
           /
         </MenuElement>
@@ -67,6 +70,72 @@ function Menu({ lang, active, currentPathMenu }) {
           link={`/TwitchKillMe/${lang.name}/presets/armor`}
         >
           {lang.menu.presets.armor}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("drop")}
+          link={`/TwitchKillMe/${lang.name}/presets/drop`}
+        >
+          {lang.menu.presets.drop}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("console-command")}
+          link={`/TwitchKillMe/${lang.name}/presets/console-command`}
+        >
+          {lang.menu.presets["console-command"]}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("gamemode")}
+          link={`/TwitchKillMe/${lang.name}/presets/gamemode`}
+        >
+          {lang.menu.presets.gamemode}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("void-chunk")}
+          link={`/TwitchKillMe/${lang.name}/presets/void-chunk`}
+        >
+          {lang.menu.presets["void-chunk"]}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("freeze")}
+          link={`/TwitchKillMe/${lang.name}/presets/freeze`}
+        >
+          {lang.menu.presets.freeze}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("teleport")}
+          link={`/TwitchKillMe/${lang.name}/presets/teleport`}
+        >
+          {lang.menu.presets.teleport}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("place")}
+          link={`/TwitchKillMe/${lang.name}/presets/place`}
+        >
+          {lang.menu.presets.place}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("clear-inventory")}
+          link={`/TwitchKillMe/${lang.name}/presets/clear-inventory`}
+        >
+          {lang.menu.presets["clear-inventory"]}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("random-reward")}
+          link={`/TwitchKillMe/${lang.name}/presets/random-reward`}
+        >
+          {lang.menu.presets["random-reward"]}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("multi-reward")}
+          link={`/TwitchKillMe/${lang.name}/presets/multi-reward`}
+        >
+          {lang.menu.presets["multi-reward"]}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("potions-rain")}
+          link={`/TwitchKillMe/${lang.name}/presets/potions-rain`}
+        >
+          {lang.menu.presets["potions-rain"]}
         </MenuElement>
       </MenuSection>
       <MenuSection title="Rewards collection">
