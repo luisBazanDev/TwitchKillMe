@@ -1,14 +1,14 @@
 ---
-title: Random reward
-description: With this preset you can randomizer other rewards.
+title: Multi reward
+description: With this preset, you can run other rewards simultaneously.
 layout: ../../../layouts/MainLayout.astro
 lang: en-us
 author: Luis Bazán
 ---
 
-# Random reward
+# Multi reward
 
-With this preset you can randomizer other rewards.
+With this preset, you can run other rewards simultaneously.
 
 ```yaml
 settings:
@@ -18,7 +18,7 @@ settings:
     - reward-3
 ```
 
-- Preset ID is `random-reward`
+- Preset ID is `multi-reward`
 
 ### Settings
 
