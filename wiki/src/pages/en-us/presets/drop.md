@@ -38,4 +38,4 @@ _Note: Slot or slots, you can't use both at the same time._
 - `random` - Random slot.
 - Number - Integer from 0 to 45.
 
-![slots](https://proxy.spigotmc.org/3688e503e566241a19c46cd48cf3cba962c553fe?url=https%3A%2F%2Fwiki.vg%2Fimages%2Fthumb%2F1%2F13%2FInventory-slots.png%2F300px-Inventory-slots.png)
+![slots](/TwitchKillMe/presets/inventory-ids.png)
