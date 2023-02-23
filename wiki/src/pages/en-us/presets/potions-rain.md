@@ -13,7 +13,7 @@ With this preset, you can spawn potions of many effects in a radius of the playe
 ```yaml
 settings:
   radius: 5
-  effects: # EFFECT;AMOUNT;AMPLIFIER;DURATION_IN_TICKS - Effects list on https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/potion/PotionEffectType.html
+  effects:
     - SPEED;2;1;300
     - ABSORPTION;2;0;200
 ```
