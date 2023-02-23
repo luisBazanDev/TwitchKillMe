@@ -36,6 +36,7 @@ export const MENU_LANGS = {
         "void-chunk": "Void chunk",
         freeze: "Freeze",
         teleport: "Teleport",
+        place: "Place",
       },
     },
     footer: {

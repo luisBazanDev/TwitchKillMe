@@ -104,6 +104,12 @@ function Menu({ lang, active, currentPathMenu }) {
         >
           {lang.menu.presets.teleport}
         </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("place")}
+          link={`/TwitchKillMe/${lang.name}/presets/place`}
+        >
+          {lang.menu.presets.place}
+        </MenuElement>
       </MenuSection>
       <MenuSection title="Rewards collection">
         <MenuElement>Zombies reward</MenuElement>
