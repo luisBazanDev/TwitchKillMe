@@ -13,9 +13,10 @@ function Menu({ lang, active, currentPathMenu }) {
         <MenuElement
           active={
             currentPathMenu.includes("getting-started") &&
-            currentPathMenu.length == 2
+            currentPathMenu.includes("") &&
+            currentPathMenu.length == 3
           }
-          link={`/TwitchKillMe/${lang.name}/getting-started`}
+          link={`/TwitchKillMe/${lang.name}/getting-started/`}
         >
           /
         </MenuElement>
@@ -44,9 +45,11 @@ function Menu({ lang, active, currentPathMenu }) {
       >
         <MenuElement
           active={
-            currentPathMenu.includes("presets") && currentPathMenu.length == 2
+            currentPathMenu.includes("presets") &&
+            currentPathMenu.includes("") &&
+            currentPathMenu.length == 3
           }
-          link={`/TwitchKillMe/${lang.name}/presets`}
+          link={`/TwitchKillMe/${lang.name}/presets/`}
         >
           /
         </MenuElement>
@@ -109,6 +112,30 @@ function Menu({ lang, active, currentPathMenu }) {
           link={`/TwitchKillMe/${lang.name}/presets/place`}
         >
           {lang.menu.presets.place}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("clear-inventory")}
+          link={`/TwitchKillMe/${lang.name}/presets/clear-inventory`}
+        >
+          {lang.menu.presets["clear-inventory"]}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("random-reward")}
+          link={`/TwitchKillMe/${lang.name}/presets/random-reward`}
+        >
+          {lang.menu.presets["random-reward"]}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("multi-reward")}
+          link={`/TwitchKillMe/${lang.name}/presets/multi-reward`}
+        >
+          {lang.menu.presets["multi-reward"]}
+        </MenuElement>
+        <MenuElement
+          active={currentPathMenu.includes("potions-rain")}
+          link={`/TwitchKillMe/${lang.name}/presets/potions-rain`}
+        >
+          {lang.menu.presets["potions-rain"]}
         </MenuElement>
       </MenuSection>
       <MenuSection title="Rewards collection">

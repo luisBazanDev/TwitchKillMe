@@ -37,6 +37,10 @@ export const MENU_LANGS = {
         freeze: "Freeze",
         teleport: "Teleport",
         place: "Place",
+        "clear-inventory": "Clear inventory",
+        "random-reward": "Random reward",
+        "multi-reward": "Multi reward",
+        "potions-rain": "Potion rain",
       },
     },
     footer: {

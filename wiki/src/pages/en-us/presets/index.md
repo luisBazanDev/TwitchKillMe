@@ -1,7 +1,7 @@
 ---
 title: Presets
 description: In this section we are going to see each one of the presets that the plugin supports.
-layout: ../../layouts/MainLayout.astro
+layout: ../../../layouts/MainLayout.astro
 lang: en-us
 author: Luis Bazán
 ---
