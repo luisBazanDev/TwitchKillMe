@@ -43,8 +43,8 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] Test command
 - [X] Multi-languages support
 - [X] Refresh token
+- [X] Wiki
 - [ ] Save rewards on system disable, and save on cache file
-- [ ] Wiki
 - [ ] User community Points Support
 - [ ] Raid's support
 - Presets
