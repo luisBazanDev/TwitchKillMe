@@ -1,4 +1,6 @@
 import { Preset } from "./Presets";
-export interface Shop {
+
+export type Shop = {
   items: Preset[];
-}
+  addItem: (Preset) => void;
+};

@@ -1,16 +1,18 @@
 ---
-import { SITE, Frontmatter } from '../config';
+import { SITE, Frontmatter } from "../config";
 
 export interface Props {
-	frontmatter: Frontmatter;
+  frontmatter: Frontmatter;
 }
 
 const { frontmatter } = Astro.props as Props;
 const formattedContentTitle = `${frontmatter.title} - ${SITE.title}`;
-
 ---
 
 <!-- Twitter Tags -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={formattedContentTitle} />
-<meta name="twitter:description" content={frontmatter.description ?? SITE.description} />
+<meta
+  name="twitter:description"
+  content={frontmatter.description ?? SITE.description}
+/>

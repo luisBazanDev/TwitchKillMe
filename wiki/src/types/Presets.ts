@@ -72,10 +72,10 @@ export interface TeleportPreset {
   z: CordsRange;
 }
 
-export interface PlaceableBlock {
+export type PlaceableBlock = {
   material: MaterialType;
   cords: number[];
-}
+};
 
 export interface PlacePreset {
   blocks: PlaceableBlock[];
@@ -91,19 +91,19 @@ export interface MultiRewardPreset {
   rewards: string[];
 }
 
-export interface PotionEffect {
+export type PotionEffect = {
   effect: PotionType;
   amount: number;
   amplifier: number;
   duration: Ticks;
-}
+};
 
 export interface PotionRainPreset {
   radius: number;
   effects: PotionEffect;
 }
 
-export type Preset =
+type RawPresets =
   | SummonPreset
   | GivePreset
   | ArmorPreset
@@ -118,3 +118,29 @@ export type Preset =
   | RandomRewardPreset
   | MultiRewardPreset
   | PotionRainPreset;
+
+export enum PresetType {
+  "SummonPreset",
+  "GivePreset",
+  "ArmorPreset",
+  "DropPresets",
+  "ConsoleCommandPreset",
+  "GamemodePreset",
+  "VoidChunkPreset",
+  "FreezePreset",
+  "TeleportPreset",
+  "PlacePreset",
+  "ClearInventoryPreset",
+  "RandomRewardPreset",
+  "MultiRewardPreset",
+  "PotionRainPreset",
+}
+
+export class Preset {
+  preset: PresetType;
+  reward: RawPresets;
+  constructor(preset: PresetType, reward: RawPresets) {
+    this.preset = preset;
+    this.reward = reward;
+  }
+}
