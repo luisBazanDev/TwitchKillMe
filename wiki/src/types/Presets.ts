@@ -6,6 +6,8 @@ import {
   Gamemodes,
   AlertType,
   PotionType,
+  Ticks,
+  Seconds,
 } from "./SpigotTypes";
 
 export interface SummonPreset {
@@ -41,20 +43,20 @@ export interface DropPresets {
 }
 
 export interface ConsoleCommandPreset {
-  interval: number;
+  interval: Ticks;
   commands: string[];
 }
 
 export interface GamemodePreset {
   gamemode: Gamemodes;
-  time: number;
+  time: Seconds;
   alert: AlertType;
 }
 
 export interface VoidChunkPreset {}
 
 export interface FreezePreset {
-  time: number;
+  time: Seconds;
   alert: AlertType;
 }
 
@@ -93,7 +95,7 @@ export interface PotionEffect {
   effect: PotionType;
   amount: number;
   amplifier: number;
-  durationInTicks: number;
+  duration: Ticks;
 }
 
 export interface PotionRainPreset {

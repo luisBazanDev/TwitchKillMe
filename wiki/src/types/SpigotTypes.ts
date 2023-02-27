@@ -1502,3 +1502,6 @@ export enum AlertType {
   BOSSBAR,
   ACTIONBAR,
 }
+
+export type Ticks = number;
+export type Seconds = number;
