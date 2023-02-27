@@ -1450,6 +1450,30 @@ export enum MaterialType {
   ZOMBIFIED_PIGLIN_SPAWN_EGG,
 }
 
+export enum PotionType {
+  AWKWARD,
+  FIRE_RESISTANCE,
+  INSTANT_DAMAGE,
+  INSTANT_HEAL,
+  INVISIBILITY,
+  JUMP,
+  LUCK,
+  MUNDANE,
+  NIGHT_VISION,
+  POISON,
+  REGEN,
+  SLOW_FALLING,
+  SLOWNESS,
+  SPEED,
+  STRENGTH,
+  THICK,
+  TURTLE_MASTER,
+  UNCRAFTABLE,
+  WATER,
+  WATER_BREATHING,
+  WEAKNESS,
+}
+
 export enum ArmorSlots {
   HELMET,
   CHESTPLATE,
@@ -1465,4 +1489,16 @@ export enum DropSlots {
   "MAIN-HAND",
   "OFF-HAND",
   RANDOM,
+}
+
+export enum Gamemodes {
+  SURVIVAL,
+  GAMEMODE,
+  ADVENTURE,
+  SPECTATOR,
+}
+
+export enum AlertType {
+  BOSSBAR,
+  ACTIONBAR,
 }
