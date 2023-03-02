@@ -2,7 +2,6 @@
 import HeadCommon from "../components/HeadCommon.astro";
 import Header from "../components/Header.jsx";
 import Footer from "../components/Footer.astro";
-import { ShopProvider } from "../contexts/Shop";
 import ShopCart from "../components/ShopCart";
 import * as CONFIG from "../config";
 
@@ -23,25 +22,23 @@ const langTexts = CONFIG.MENU_LANGS[lang ?? "en-us"];
     </title>
   </head>
   <body class="font-ubuntu">
-    <ShopProvider client:idle>
-      <Header currentPathMenu={"nose"} title={"a"} lang={lang} client:load />
+    <Header currentPathMenu={"nose"} title={"a"} lang={lang} client:load />
+    <div
+      class="flex flex-col justify-between w-full lg:flex-row min-h-screen h-auto bg-tkm_black"
+    >
       <div
-        class="flex flex-col justify-between w-full lg:flex-row min-h-screen h-auto bg-tkm_black"
+        class="hidden lg:block w-1/6 bg-tkm_gray_dark border-r border-tkm_purple_dark"
       >
-        <div
-          class="hidden lg:block w-1/6 bg-tkm_gray_dark border-r border-tkm_purple_dark"
-        >
-          <div>TEST</div>
-        </div>
-        <main class="bg-tkm_black text-tkm_white p-3 markdown lg:w-4/6 lg:p-20">
-          <slot />
-        </main>
-        <div class="flex flex-col w-full bg-tkm_gray_dark h-auto lg:w-1/6">
-          <div class="text-tkm_white text-center w-full font-bold">Items</div>
-          <ShopCart client:idle />
-        </div>
+        <div>TEST</div>
       </div>
-    </ShopProvider>
+      <main class="bg-tkm_black text-tkm_white p-3 markdown lg:w-4/6 lg:p-20">
+        <slot />
+      </main>
+      <div class="flex flex-col w-full bg-tkm_gray_dark h-auto lg:w-1/6">
+        <div class="text-tkm_white text-center w-full font-bold">Items</div>
+        <ShopCart client:idle />
+      </div>
+    </div>
     <Footer lang={langTexts} />
   </body>
 </html>
