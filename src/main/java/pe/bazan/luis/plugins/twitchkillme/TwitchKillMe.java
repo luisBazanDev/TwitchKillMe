@@ -6,6 +6,7 @@ import pe.bazan.luis.plugins.twitchkillme.configs.MainConfigManager;
 import pe.bazan.luis.plugins.twitchkillme.configs.MessagesConfig;
 import pe.bazan.luis.plugins.twitchkillme.configs.NotificationsConfig;
 import pe.bazan.luis.plugins.twitchkillme.configs.RewardsConfig;
+import pe.bazan.luis.plugins.twitchkillme.utils.Metrics;
 
 public final class TwitchKillMe extends JavaPlugin {
   private MainConfigManager mainConfigManager;
@@ -15,6 +16,8 @@ public final class TwitchKillMe extends JavaPlugin {
   private static TwitchKillMe instance;
   private TwitchService twitchService;
   private boolean enable;
+  private Metrics metrics;
+  private int pluginId = 18113;
 
   @Override
   public void onEnable() {
@@ -27,6 +30,7 @@ public final class TwitchKillMe extends JavaPlugin {
     twitchService = new TwitchService(this);
     new MainCommand(this);
     this.enable = mainConfigManager.getEnable();
+    this.metrics = new Metrics(this, pluginId);
   }
 
   @Override
