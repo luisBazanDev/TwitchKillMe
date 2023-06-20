@@ -44,6 +44,7 @@ This is a popular event among streamers on twitch. So far the best way was a mod
 - [X] Multi-languages support
 - [X] Refresh token
 - [X] Wiki
+- [ ] Multi token support
 - [ ] Implements the twtichtokengenerator API to get credentials
 - [ ] Implements conditionals prices on rewards config >,=,<=, etc.
 - [ ] Save rewards on system disable, and save on cache file
